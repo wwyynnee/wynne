@@ -15,6 +15,17 @@
   border-radius: 25px;
 }
 
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin boxHover {
+  background-color: #ffffff15;
+  border-radius: 4px;
+}
+
 @mixin bg {
   background: url("images/bg.jpg");
   background-repeat: no-repeat;
@@ -23,31 +34,62 @@
   width: 100%;
 }
 
+@mixin button {
+  background-color: white;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
 html, body {
-  color: white;
-  height: 100% !important;
-  width: 100%;
+  font-family: "Roboto", sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
-}
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  user-select: none;
+  overflow-x: hidden;
+  color: white;
   height: 100%;
   width: 100%;
+  @include center;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 1920px;
 }
 .nav {
   position: absolute;
+  display: flex;
+  height: 4rem;
+  width: 100%;
   &__content {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
     ul {
+      display: flex;
       a {
-        color: black;
+        &, li {
+          @include center;
+          font-size: 1.05rem;
+          height: 4rem;
+          width: 8rem;
+        }
+        &:hover {
+          @include boxHover;
+        }
       }
     }
+  }
+  &__icon {
+    margin: .5rem;
+    &, img {
+      height: 3rem;
+    }
+  }
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 600;
   }
 }
 .container {
@@ -62,6 +104,20 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  &__btn {
+    button {
+      @include button;
+    }
+  }
+  &__copyright {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 0;
   }
   &__icons {
     width: 100%;
@@ -91,15 +147,6 @@ html, body {
         }
       }
     }
-  }
-  &__copyright {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: flex-end;
-    bottom: 0;
   }
   h1 {
     font-size: 2.5rem;

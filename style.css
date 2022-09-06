@@ -19,29 +19,60 @@
 }
 
 html, body {
-  color: white;
-  height: 100% !important;
-  width: 100%;
+  font-family: "Roboto", sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
+  user-select: none;
+  overflow-x: hidden;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100%;
   width: 100%;
+  max-width: 1920px;
 }
 
 .nav {
   position: absolute;
+  display: flex;
+  height: 4rem;
+  width: 100%;
 }
-.nav__content ul a {
-  color: black;
+.nav__content {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+.nav__content ul {
+  display: flex;
+}
+.nav__content ul a, .nav__content ul a li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  height: 4rem;
+  width: 8rem;
+}
+.nav__content ul a:hover {
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  border-radius: 4px;
+}
+.nav__icon {
+  margin: 0.5rem;
+}
+.nav__icon, .nav__icon img {
+  height: 3rem;
+}
+.nav__name {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .container {
@@ -61,6 +92,21 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.container__btn button {
+  background-color: white;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+.container__copyright {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 0;
 }
 .container__icons {
   width: 100%;
@@ -88,15 +134,6 @@ html, body {
 .container__icons a div:hover {
   transform: scale(1.1);
   transition: 1s;
-}
-.container__copyright {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  align-items: flex-end;
-  bottom: 0;
 }
 .container h1 {
   font-size: 2.5rem;

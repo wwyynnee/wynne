@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
+  font-weight: 300;
   padding: 0;
   margin: 0;
 }
+
+$main-color: #5dfec0;
+
 ::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background-color: #111;
+  width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 25px;
+  background-color: #5dfec0;
 }
 
 @mixin center {
@@ -23,7 +23,9 @@
 
 @mixin boxHover {
   background-color: #ffffff15;
+  animation-duration: .5s;
   border-radius: 4px;
+  color: $main-color;
 }
 
 @mixin bg {
@@ -35,14 +37,15 @@
 }
 
 @mixin button {
-  background-color: white;
-  border-radius: 4px;
+  background-color: #00000050;
+  border-radius: 10px;
   outline: none;
   border: none;
+  color: white;
 }
 
 html, body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
   user-select: none;
@@ -65,7 +68,9 @@ html, body {
   &__content {
     display: flex;
     align-items: center;
-    margin: 0 1rem;
+    &:first-child {
+      margin: 0 2.5rem;
+    }
     ul {
       display: flex;
       a {
@@ -81,6 +86,11 @@ html, body {
       }
     }
   }
+  &__navigation {
+    @include center;
+    position: absolute;
+    width: 100%;
+  }
   &__icon {
     margin: .5rem;
     &, img {
@@ -93,10 +103,9 @@ html, body {
   }
 }
 .container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  @include center;
   @include bg;
+  flex-direction: column;
   &__item {
     display: flex;
     width: 100%;
@@ -106,54 +115,22 @@ html, body {
     justify-content: center;
   }
   &__btn {
+    font-size: 1.1rem;
+    min-width: 300px;
+    margin: 1rem;
     button {
       @include button;
-    }
-  }
-  &__copyright {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: flex-end;
-    bottom: 0;
-  }
-  &__icons {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    user-select: none;
-    margin: 1rem 0;
-    a {
-      div {
-        border-radius: 100px;
-        background-color: white;
-        width: 5rem;
-        height: 5rem;
-        margin: .5rem;
-        img {
-          width: 5rem;
-          height: 5rem;
-          border-radius: 100px;
-          padding: .5rem;
-        }
-        &:hover {
-          transform: scale(1.1);
-          transition: 1s;
-        }
-      }
+      min-width: 300px;
+      padding: 1rem;
     }
   }
   h1 {
     font-size: 2.5rem;
+    margin: 1rem 0;
   }
   h2 {
     font-size: 1.5rem;
-    font-weight: normal;
-    margin: 0 1rem;
+    font-weight: 350;
+    margin: .5rem 1rem;
   }
 }

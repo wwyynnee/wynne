@@ -107,13 +107,20 @@ html, body {
   margin: 1rem;
 }
 .container__btn button {
-  background-color: rgba(0, 0, 0, 0.3137254902);
+  background: transparent;
+  border: solid 2px white;
   border-radius: 10px;
+  cursor: pointer;
   outline: none;
-  border: none;
   color: white;
+  font-weight: 400;
+  transition: all 150ms ease-in-out;
   min-width: 300px;
   padding: 1rem;
+}
+.container__btn button:hover {
+  background-color: white;
+  color: black;
 }
 .container h1 {
   font-size: 2.5rem;
@@ -123,6 +130,29 @@ html, body {
   font-size: 1.5rem;
   font-weight: 350;
   margin: 0.5rem 1rem;
+}
+
+.main {
+  color: black;
+}
+.main h2 {
+  color: #18fea5;
+  font-size: 5rem;
+  margin: 1rem;
+}
+.main__section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+  width: 50%;
+}
+.main__section:first-child span {
+  color: #5dfec0;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+.main__section:first-child p {
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

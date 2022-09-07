@@ -7,12 +7,13 @@
 }
 
 $main-color: #5dfec0;
+$title-color: #18fea5;
 
 ::-webkit-scrollbar {
   width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #5dfec0;
+  background-color: $main-color;
 }
 
 @mixin center {
@@ -20,14 +21,12 @@ $main-color: #5dfec0;
   align-items: center;
   justify-content: center;
 }
-
 @mixin boxHover {
   background-color: #ffffff15;
   animation-duration: .5s;
   border-radius: 4px;
   color: $main-color;
 }
-
 @mixin bg {
   background: url("images/bg.jpg");
   background-repeat: no-repeat;
@@ -35,13 +34,19 @@ $main-color: #5dfec0;
   height: 100%;
   width: 100%;
 }
-
 @mixin button {
-  background-color: #00000050;
+  background: transparent;
+  border: solid 2px white;
   border-radius: 10px;
+  cursor: pointer;
   outline: none;
-  border: none;
   color: white;
+  font-weight: 400;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
 html, body {
@@ -132,5 +137,29 @@ html, body {
     font-size: 1.5rem;
     font-weight: 350;
     margin: .5rem 1rem;
+  }
+}
+.main {
+  color: black;
+  h2 {
+    color: $title-color;
+    font-size: 5rem;
+    margin: 1rem;
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    width: 50%;
+    &:first-child {
+      span {
+        color: $main-color;
+        font-size: 1.1rem;
+        margin: 1rem 0;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+    }
   }
 }

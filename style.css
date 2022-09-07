@@ -179,12 +179,28 @@ html, body {
   color: #999999;
 }
 .main__container:last-child {
+  justify-content: center;
+  align-items: center;
   padding: 0 1.5rem;
 }
 .main__container:last-child p {
-  margin: 2rem 1rem;
   font-weight: 400;
   font-size: 1.2rem;
+}
+.main__container:last-child span {
+  color: black;
+  font-weight: 400;
+  margin: 2rem 0;
+  line-height: 1.75;
+}
+.main__container:last-child span span {
+  color: #999999;
+}
+.main__container:last-child .main__section:last-child {
+  display: flex;
+  flex-direction: column;
+  width: calc(45% - 2rem);
+  margin: 0 1rem;
 }
 .main__section {
   display: flex;

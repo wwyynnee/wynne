@@ -189,11 +189,27 @@ html, body {
       }
     }
     &:last-child {
+      justify-content: center;
+      align-items: center;
       padding: 0 1.5rem;
       p {
-        margin: 2rem 1rem;
         font-weight: 400;
         font-size: 1.2rem;
+      }
+      span {
+        color: black;
+        font-weight: 400;
+        margin: 2rem 0;
+        line-height: 1.75;
+        span {
+          color: $text-color;
+        }
+      }
+      .main__section:last-child {
+        display: flex;
+        flex-direction: column;
+        width: calc(45% - 2rem);
+        margin: 0 1rem;
       }
     }
   }

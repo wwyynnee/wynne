@@ -8,6 +8,7 @@
 
 $main-color: #5dfec0;
 $title-color: #18fea5;
+$text-color: #999999;
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -143,8 +144,12 @@ html, body {
   color: black;
   h2 {
     color: $title-color;
+    font-weight: 400;
     font-size: 5rem;
     margin: 1rem;
+  }
+  &__container {
+    display: flex;
   }
   &__section {
     display: flex;
@@ -159,6 +164,16 @@ html, body {
       }
       p {
         font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+    &:last-child {
+      p {
+        font-weight: 400;
+        margin: 1rem 0;
+      }
+      span {
+        color: $text-color;
       }
     }
   }

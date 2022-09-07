@@ -137,8 +137,12 @@ html, body {
 }
 .main h2 {
   color: #18fea5;
+  font-weight: 400;
   font-size: 5rem;
   margin: 1rem;
+}
+.main__container {
+  display: flex;
 }
 .main__section {
   display: flex;
@@ -153,6 +157,14 @@ html, body {
 }
 .main__section:first-child p {
   font-size: 1.4rem;
+  font-weight: 400;
+}
+.main__section:last-child p {
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.main__section:last-child span {
+  color: #999999;
 }
 
 /*# sourceMappingURL=style.css.map */

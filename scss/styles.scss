@@ -7,7 +7,8 @@
 }
 
 $main-color: #5dfec0;
-$title-color: #18fea5;
+//$title-color: #18fea5;
+$title-color: #efefef;
 $text-color: #999999;
 
 ::-webkit-scrollbar {
@@ -32,8 +33,14 @@ $text-color: #999999;
   background: url("images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+}
+@mixin parallaxbg {
+  background: url("images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 @mixin button {
   background: transparent;
@@ -158,6 +165,9 @@ html, body {
   &__content {
     @include center;
     flex-direction: column;
+    &:nth-child(3) {
+      @include parallaxbg;
+    }
   }
   &__container {
     display: flex;
@@ -188,28 +198,48 @@ html, body {
         }
       }
     }
-    &:last-child {
+    &:nth-child(2) {
       justify-content: center;
       align-items: center;
       padding: 0 1.5rem;
-      p {
-        font-weight: 400;
-        font-size: 1.2rem;
-      }
-      span {
-        color: black;
-        font-weight: 400;
-        margin: 2rem 0;
-        line-height: 1.75;
-        span {
-          color: $text-color;
-        }
-      }
-      .main__section:last-child {
+      .main__section {
         display: flex;
         flex-direction: column;
         width: calc(45% - 2rem);
         margin: 0 1rem;
+        p {
+          font-weight: 400;
+          font-size: 1.2rem;
+        }
+        span {
+          color: black;
+          font-weight: 400;
+          margin: 2rem 0;
+          line-height: 1.75;
+          span {
+            color: $text-color;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .main__section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        img {
+          width: 64px;
+          margin: 1rem 0;
+        }
+        p {
+          font-weight: 400;
+          font-size: 1.1rem;
+          margin: 0 0 1rem;
+        }
+        span {
+          color: $text-color;
+          font-size: .9rem;
+        }
       }
     }
   }

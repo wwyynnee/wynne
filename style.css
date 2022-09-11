@@ -96,7 +96,7 @@ html, body {
   background: url("images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   flex-direction: column;
 }
@@ -143,7 +143,7 @@ html, body {
   color: black;
 }
 .main h2 {
-  color: #18fea5;
+  color: #efefef;
   font-weight: 400;
   font-size: 5rem;
   margin: 1rem;
@@ -153,6 +153,12 @@ html, body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.main__content:nth-child(3) {
+  background: url("images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 .main__container {
   display: flex;
@@ -178,29 +184,47 @@ html, body {
 .main__container:first-child .main__section:last-child span {
   color: #999999;
 }
-.main__container:last-child {
+.main__container:nth-child(2) {
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
 }
-.main__container:last-child p {
+.main__container:nth-child(2) .main__section {
+  display: flex;
+  flex-direction: column;
+  width: calc(45% - 2rem);
+  margin: 0 1rem;
+}
+.main__container:nth-child(2) .main__section p {
   font-weight: 400;
   font-size: 1.2rem;
 }
-.main__container:last-child span {
+.main__container:nth-child(2) .main__section span {
   color: black;
   font-weight: 400;
   margin: 2rem 0;
   line-height: 1.75;
 }
-.main__container:last-child span span {
+.main__container:nth-child(2) .main__section span span {
   color: #999999;
 }
-.main__container:last-child .main__section:last-child {
-  display: flex;
+.main__container:nth-child(3) .main__section {
   flex-direction: column;
-  width: calc(45% - 2rem);
-  margin: 0 1rem;
+  align-items: center;
+  text-align: center;
+}
+.main__container:nth-child(3) .main__section img {
+  width: 64px;
+  margin: 1rem 0;
+}
+.main__container:nth-child(3) .main__section p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+.main__container:nth-child(3) .main__section span {
+  color: #999999;
+  font-size: 0.9rem;
 }
 .main__section {
   display: flex;

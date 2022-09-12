@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="template/reset.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <title>Wynne</title>
   </head>
@@ -25,16 +26,16 @@
           </div>
           <div class="nav__content nav__navigation">
             <ul class="ul">
-              <a href="#about">
+              <a href="#about" class="nav__elements about">
                 <li class="nav__container">Обо мне</li>
               </a>
-              <a href="#price">
+              <a href="#price" class="nav__elements price">
                 <li class="nav__container">Прайс</li>
               </a>
-              <a href="#portfolio">
+              <a href="#portfolio" class="nav__elements portfolio">
                 <li class="nav__container">Портфолио</li>
               </a>
-              <a href="#contacts">
+              <a href="#contacts" class="nav__elements contacts">
                 <li class="nav__container">Контакты</li>
               </a>
             </ul>
@@ -51,8 +52,8 @@
             <button>Заказать сайт</button>
           </div>
         </div>       
-        <div class="main">
-          <h2>Обо мне</h2>
+        <div class="main" id="about">
+          <h3>Обо мне</h3>
           <div class="main__content">
             <div class="main__container">
               <div class="main__section">
@@ -96,6 +97,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="main">
           <div class="main__content">
             <div class="main__container"></div>
           </div>

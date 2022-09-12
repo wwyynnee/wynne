@@ -6,9 +6,10 @@
   margin: 0;
 }
 
-$main-color: #5dfec0;
+//$main-color: #5dfec0;
 //$title-color: #18fea5;
 $title-color: #efefef;
+$main-color: #636bfc;
 $text-color: #999999;
 
 ::-webkit-scrollbar {
@@ -75,11 +76,12 @@ html, body {
     width: 100%;
   }
   &__content {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 4rem;
   }
 }
 .nav {
+  background-color: #111;
   position: absolute;
   display: flex;
   height: 4rem;
@@ -126,6 +128,7 @@ html, body {
   @include center;
   @include bg;
   flex-direction: column;
+  padding-bottom: 4rem;
   &__item {
     display: flex;
     width: 100%;
@@ -156,7 +159,7 @@ html, body {
 }
 .main {
   color: black;
-  h2 {
+  h3 {
     color: $title-color;
     font-weight: 400;
     font-size: 5rem;

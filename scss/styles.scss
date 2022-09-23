@@ -9,6 +9,7 @@
 //$main-color: #5dfec0;
 //$title-color: #18fea5;
 $title-color: #efefef;
+$dark-color: #111111;
 $main-color: #636bfc;
 $text-color: #999999;
 
@@ -81,7 +82,8 @@ html, body {
   }
 }
 .nav {
-  background-color: #111;
+  justify-content: space-between;
+  background-color: $dark-color;
   position: absolute;
   display: flex;
   height: 4rem;
@@ -90,8 +92,22 @@ html, body {
   &__content {
     display: flex;
     align-items: center;
+    z-index: 1;
     &:first-child {
       margin: 0 2.5rem;
+    }
+    &:nth-child(3) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px !important;
+      font-size: 1.5rem;
+      margin: .4rem;
+      height: 50px;
+      width: 50px;
+      &:hover {
+        @include boxHover;
+      }
     }
     ul {
       display: flex;

@@ -11,7 +11,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #636bfc;
+  background-color: #3054e5;
 }
 
 html, body {
@@ -41,7 +41,7 @@ html, body {
 
 .nav {
   justify-content: space-between;
-  background-color: #111111;
+  background-color: #1F2029;
   position: absolute;
   display: flex;
   height: 4rem;
@@ -70,7 +70,7 @@ html, body {
   background-color: rgba(255, 255, 255, 0.0823529412);
   animation-duration: 0.5s;
   border-radius: 4px;
-  color: #636bfc;
+  color: #3054e5;
 }
 .nav__content ul {
   display: flex;
@@ -87,7 +87,7 @@ html, body {
   background-color: rgba(255, 255, 255, 0.0823529412);
   animation-duration: 0.5s;
   border-radius: 4px;
-  color: #636bfc;
+  color: #3054e5;
 }
 .nav__navigation {
   display: flex;
@@ -127,7 +127,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #111111;
+  color: #1F2029;
 }
 .container__btn {
   font-size: 1.1rem;
@@ -135,30 +135,37 @@ html, body {
   margin: 1rem;
 }
 .container__btn button {
-  background: rgba(255, 255, 255, 0.0823529412);
+  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
   border: solid 2px #111111;
   border-radius: 10px;
   cursor: pointer;
   outline: none;
-  color: #111111;
+  color: black;
   font-weight: 400;
   transition: all 150ms ease-in-out;
   min-width: 300px;
   padding: 1rem;
 }
 .container__btn button:hover {
-  border: solid 2px white;
-  background-color: white;
-  color: black;
+  background: linear-gradient(250deg, #5433ff, #20bdff, #a5fecb);
+  border-color: white;
+  color: white;
 }
 .container h1 {
+  font-weight: 400;
   font-size: 2.5rem;
   margin: 1rem 0;
+  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .container h2 {
   font-size: 1.5rem;
   font-weight: 350;
   margin: 0.5rem 1rem;
+  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main {
@@ -180,7 +187,7 @@ html, body {
   flex-direction: column;
 }
 .main__container:first-child .main__section h3 {
-  color: #636bfc;
+  color: #3054e5;
   font-weight: 400;
   font-size: 1.5rem;
   margin: 1rem 0;

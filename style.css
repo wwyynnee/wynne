@@ -11,7 +11,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3054e5;
+  background-color: #5433ff;
 }
 
 html, body {
@@ -70,7 +70,7 @@ html, body {
   background-color: rgba(255, 255, 255, 0.0823529412);
   animation-duration: 0.5s;
   border-radius: 4px;
-  color: #3054e5;
+  color: #5433ff;
 }
 .nav__content ul {
   display: flex;
@@ -87,7 +87,7 @@ html, body {
   background-color: rgba(255, 255, 255, 0.0823529412);
   animation-duration: 0.5s;
   border-radius: 4px;
-  color: #3054e5;
+  color: #5433ff;
 }
 .nav__navigation {
   display: flex;
@@ -119,6 +119,7 @@ html, body {
   width: 100%;
   flex-direction: column;
   padding-bottom: 4rem;
+  text-shadow: 1px 0.5px 2px grey;
 }
 .container__item {
   display: flex;
@@ -135,37 +136,33 @@ html, body {
   margin: 1rem;
 }
 .container__btn button {
-  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
-  border: solid 2px #111111;
+  background: linear-gradient(250deg, #5433ff, #20bdff, #a5fecb);
+  border: solid 2px white;
   border-radius: 10px;
   cursor: pointer;
   outline: none;
-  color: black;
+  color: white;
   font-weight: 400;
   transition: all 150ms ease-in-out;
   min-width: 300px;
   padding: 1rem;
 }
 .container__btn button:hover {
-  background: linear-gradient(250deg, #5433ff, #20bdff, #a5fecb);
-  border-color: white;
-  color: white;
+  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  border-color: #1F2029;
+  color: #1F2029;
 }
 .container h1 {
   font-weight: 400;
   font-size: 2.5rem;
   margin: 1rem 0;
-  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
 }
 .container h2 {
   font-size: 1.5rem;
   font-weight: 350;
   margin: 0.5rem 1rem;
-  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
 }
 
 .main {
@@ -187,7 +184,9 @@ html, body {
   flex-direction: column;
 }
 .main__container:first-child .main__section h3 {
-  color: #3054e5;
+  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 400;
   font-size: 1.5rem;
   margin: 1rem 0;

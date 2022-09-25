@@ -33,6 +33,7 @@ $text-color: #999999;
 }
 @mixin bg {
   background: url("images/bg.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -41,19 +42,21 @@ $text-color: #999999;
 @mixin parallaxbg {
   background: url("images/bg2.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
 }
 @mixin button {
-  background: transparent;
-  border: solid 2px white;
+  background: #ffffff15;
+  border: solid 2px $dark-color;
   border-radius: 10px;
   cursor: pointer;
   outline: none;
-  color: white;
+  color: $dark-color;
   font-weight: 400;
   transition: all 150ms ease-in-out;
   &:hover {
+    border: solid 2px white;
     background-color: white;
     color: black;
   }
@@ -77,10 +80,11 @@ html, body {
     width: 100%;
   }
   &__content {
-    position: relative;
-    top: 4rem;
+    margin-top: 4rem;
   }
 }
+
+// Навигация
 .nav {
   justify-content: space-between;
   background-color: $dark-color;
@@ -140,6 +144,8 @@ html, body {
     font-weight: 600;
   }
 }
+
+// Главный блок
 .container {
   @include center;
   @include bg;
@@ -152,7 +158,9 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: $dark-color;
   }
+  // Кнопка
   &__btn {
     font-size: 1.1rem;
     min-width: 300px;
@@ -163,9 +171,10 @@ html, body {
       padding: 1rem;
     }
   }
+  // Текст
   h1 {
     font-size: 2.5rem;
-    margin: 1rem 0;
+    margin: 1rem 0;  
   }
   h2 {
     font-size: 1.5rem;
@@ -175,48 +184,34 @@ html, body {
 }
 .main {
   color: black;
-  h3 {
-    color: $title-color;
-    font-weight: 400;
-    font-size: 5rem;
-    margin: 1rem;
-  }
   &__content {
     @include center;
     flex-direction: column;
-    &:nth-child(3) {
-      @include parallaxbg;
-    }
   }
   &__container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 1rem 0;
     &:first-child {
       .main__section {
         flex-direction: column;
-        &:first-child {
-          span {
-            color: $main-color;
-            font-size: 1.1rem;
-            margin: 1rem 0;
-          }
-          p {
-            font-size: 1.4rem;
-            font-weight: 400;
-          }
+        h3 {
+          color: $main-color;
+          font-weight: 400;
+          font-size: 1.5rem;
+          margin: 1rem 0;
         }
-        &:last-child {
-          p {
-            font-weight: 400;
-            margin: 1rem 0;
-          }
-          span {
-            color: $text-color;
-          }
+        p {
+          font-size: 1.3rem;
+          font-weight: 400;
+        }
+        img {
+          width: 75%;
         }
       }
     }
+    // Второй блок
     &:nth-child(2) {
       justify-content: center;
       align-items: center;
@@ -226,38 +221,45 @@ html, body {
         flex-direction: column;
         width: calc(45% - 2rem);
         margin: 0 1rem;
+        // Изображение
+        img {
+          width: 75%;
+        }
+        // Текст к изображению
         p {
           font-weight: 400;
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
+        // Текст под текстом
         span {
-          color: black;
+          color: $text-color;
+          font-size: 1.2rem;
           font-weight: 400;
           margin: 2rem 0;
           line-height: 1.75;
-          span {
-            color: $text-color;
-          }
         }
       }
     }
+    // Третий блок - Преимущества
     &:nth-child(3) {
       .main__section {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        width: calc(25% - 2rem);
+        // Иконка
         img {
-          width: 64px;
+          width: 5rem;
           margin: 1rem 0;
         }
         p {
           font-weight: 400;
-          font-size: 1.1rem;
+          font-size: 1.2rem;
           margin: 0 0 1rem;
         }
         span {
           color: $text-color;
-          font-size: .9rem;
+          font-size: .95rem;
         }
       }
     }
@@ -267,4 +269,7 @@ html, body {
     width: calc(50% - 2rem);
     margin: 0 1rem;
   }
+}
+.lvl {
+  @include parallaxbg;
 }

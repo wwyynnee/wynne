@@ -64,6 +64,15 @@ $text-color: #999999;
     color: $nav-color;
   }
 }
+@mixin parallax {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 html, body {
   font-family: "Inter", sans-serif;
@@ -160,7 +169,24 @@ h3 {
   @include bg;
   flex-direction: column;
   padding-bottom: 4rem;
-  text-shadow: 4px 2px 7px grey;
+  //text-shadow: 4px 2px 7px grey;
+  text-shadow: 
+		-0   -1px 0   $nav-color,
+		 0   -1px 0   $nav-color,
+		-0    1px 0   $nav-color,
+		 0    1px 0   $nav-color,
+		-1px -0   0   $nav-color,
+		 1px -0   0   $nav-color,
+		-1px  0   0   $nav-color,
+		 1px  0   0   $nav-color,
+		-1px -1px 0   $nav-color,
+		 1px -1px 0   $nav-color,
+		-1px  1px 0   $nav-color,
+		 1px  1px 0   $nav-color,
+		-1px -1px 0   $nav-color,
+		 1px -1px 0   $nav-color,
+		-1px  1px 0   $nav-color,
+		 1px  1px 0   $nav-color;
   &__item {
     display: flex;
     width: 100%;
@@ -279,18 +305,26 @@ h3 {
     margin: 0 1rem;
   }
 }
+.line {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 .parallax {
   background: url("images/bg2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 50%;
+  @include parallax;
+}
+.parallax2 {
+  background: url("images/bg3.jpg");
+  @include parallax;
 }
 .lvl {
   display: flex;
   justify-content: center;
-  height: 100%;
   width: 100%;
+  padding: 1rem 0;
   &__content {
     max-width: 1200px;
     width: 100%;

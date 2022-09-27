@@ -315,6 +315,31 @@ h3 {
   display: flex;
   align-items: baseline;
 }
+.lvl__items {
+  flex-wrap: wrap;
+  align-items: center !important;
+}
+.lvl__items p {
+  width: 10%;
+}
+.lvl__lang {
+  align-items: center !important;
+  flex-wrap: wrap;
+  width: 22.5%;
+}
+.lvl__lang img {
+  border: solid 1px #5433ff;
+  border-radius: 50px;
+  object-fit: contain;
+  padding: 0 0.75rem;
+  margin: 1rem;
+  height: 6rem;
+  width: 6rem;
+}
+.lvl__lang p {
+  font-size: 1.2rem;
+  width: auto;
+}
 .lvl__line {
   font-size: 1.5rem;
   margin: 0 1rem;

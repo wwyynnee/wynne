@@ -1,224 +1,274 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/icon.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="template/reset.css" />
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
-    <title>Wynne</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <nav>
-        <div class="nav">
-          <div class="nav__content">
-            <div class="nav__icon">
-              <img src="images/icon.png" alt />
-            </div>
-            <div class="nav__name">
-              <p>Wynne</p>
-            </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/icon.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="template/reset.css" />
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  <title>Wynne</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <div class="nav">
+        <div class="nav__content">
+          <div class="nav__icon">
+            <img src="images/icon.png" alt />
           </div>
-          <div class="nav__content nav__navigation">
-            <ul class="ul">
-              <a href="#about" class="nav__elements about">
-                <li class="nav__container">Обо мне</li>
-              </a>
-              <a href="#price" class="nav__elements price">
-                <li class="nav__container">Прайс</li>
-              </a>
-              <a href="#portfolio" class="nav__elements portfolio">
-                <li class="nav__container">Портфолио</li>
-              </a>
-              <a href="#contacts" class="nav__elements contacts">
-                <li class="nav__container">Контакты</li>
-              </a>
-            </ul>
+          <div class="nav__name">
+            <p>Wynne</p>
           </div>
-          <div class="nav__content">⋮</div>
         </div>
-      </nav>
-      <div class="wrapper__content">
-        <div class="container">
-          <div class="container__item">
-            <h1>Wynne</h1>
-            <h2>Веб-программист &bull; Веб-дизайнер &bull; Fullstack-разработчик</h2>
-          </div>
-          <div class="container__btn">
-            <button>Заказать сайт</button>
-          </div>
-        </div>       
-        <div class="main" id="about">
-          <div class="main__content">
-            <div class="main__container">
-              <div class="main__section">
-                <h3>Обо мне</h3>
-                <p>Я занимаюсь разработкой и созданием веб-сайтов более 3-х лет. Владею HTML, CSS, JavaScript, PHP на продвинутом уровне. Я помогаю воплощать Ваши идеи и дизайны в веб-жизнь.<br />Со мной удобно работать и мне важно, чтобы клиент остался доволен! Моя цель ― предоставить лучшую услугу на рынке!</p>
-              </div>
-              <div class="main__section">
-                <img src="images/main_2.png" alt />
-              </div>
-            </div>
-            <div class="main__container">
-              <div class="main__section">
-                <img src="images/main.png" alt />
-              </div>
-              <div class="main__section">
-                <p>Берусь за сложные и нестандартные проекты, для простых нахожу интересные решения</p>
-                <span>В работе могу использовать англоязычные ресурсы и техническую документацию. Вы можете заказать у меня сайт любого масштаба (от «визитки» или «лендинга» до корпоративного портала или интернет-магазина)</span>
-              </div>
-            </div>
-            <h3>Преимущества</h3>
-            <div class="main__container">
-              <div class="main__section">
-                <img src="images/icons/idea.png" alt />
-                <p>Креативность</p>
-                <span>Подготовлю текстовой и мультимедийный контент для сайта</span>
-              </div>
-              <div class="main__section">
-                <img src="images/icons/design.png" alt />
-                <p>Красивый дизайн</p>
-                <span>Разрабатываю макет самостоятельно или же дам консультации по уже готовому</span>
-              </div>
-              <div class="main__section">
-                <img src="images/icons/term.png" alt />
-                <p>Быстро и качественно</p>
-                <span>Подхожу к заказу ответственно и выполняю его максимально за короткий срок</span>
-              </div>
-              <div class="main__section">
-                <img src="images/icons/feedback.png" alt />
-                <p>Обратная связь</p>
-                <span>Свяжитесь со мной любым для Вас удобным способом, всегда на связи</span>
-              </div>
-            </div>
-          </div>
-        </div>   
-        <div class="parallax">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5">
-            <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white"/></path>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5" class="line">
-            <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white"/></path>
-          </svg>
+        <div class="nav__content nav__navigation">
+          <ul class="ul">
+            <a href="#about" class="nav__elements about">
+              <li class="nav__container">Обо мне</li>
+            </a>
+            <a href="#price" class="nav__elements price">
+              <li class="nav__container">Прайс</li>
+            </a>
+            <a href="#portfolio" class="nav__elements portfolio">
+              <li class="nav__container">Портфолио</li>
+            </a>
+            <a href="#contacts" class="nav__elements contacts">
+              <li class="nav__container">Контакты</li>
+            </a>
+          </ul>
         </div>
-        <div class="lvl">
-          <div class="lvl__content">
-            <div class="lvl__container">
-              <div class="lvl__section">
-                <h3>Этапы работы</h3>
-                <p><span>1</span>Составление технического задания: задачи, цели и сроки</p>
-                <p><span>2</span>Разработка макета, дизайна проекта</p>
-                <p><span>3</span>Создание сайта на основе макета</p>
-                <p><span>4</span>Съёмка видео и показ скриншотов выполненного проекта</p>
-                <p><span>5</span>После одобрения оплачиваете работу, а я отправляю ссылку на сайт, файлы проекта и предоставляю доступ к хостингу</p>
-                <p><span>6</span>По необходимости подключу домен, настрою аналитику и рекламу</p>
-                <p><span>7</span>Готово! Сайт уже можно будет продвигать!</p>
-              </div>
-              <div class="lvl__section">
-                <h3>Гарантия</h3>
-                <p>В течение недели после передачи файлов с готовой работой я бесплатно и сразу исправляю свои ошибки, которые могли быть пропущены при приеме работы и замечены позже</p>
-              </div>
-              <div class="lvl__section">
-                <h3>Работая со мной вы экономите</h3>
-                <div>
-                  <span class="lvl__line">—</span>
-                  <p><span class="lvl__text">Деньги</span>Разрабатываю удобные и качественные сайты на основе шаблонов, макетов, что существенно экономит Ваш бюджет и не требует заказа дополнительных макетов дизайна</p>
-                </div>
-                <div>
-                  <span class="lvl__line">—</span>
-                  <p><span class="lvl__text">Время</span>Выполняю работу быстро, кроссбраузерно и адаптивно. Это значит, что готовый сайт будет корректно отображаться на любых устройствах и сделает загрузку ресурса моментальной. Минимум вопросов, максимум результата!</p>
-                </div>
-                <div>
-                  <span class="lvl__line">—</span>
-                  <p><span class="lvl__text">Нервы</span>Просьбы пожелания и доработки не структурного характера уже включены в стоимость работ! Так что, если Вы пропустили ряд мелочей в дизайне они будут внесены в работу по Вашей просьбе без лишних споров и дополнительных затрат!</p>
-                </div>
-              </div>
+        <div class="nav__content">⋮</div>
+      </div>
+    </nav>
+    <div class="wrapper__content">
+      <div class="container">
+        <div class="container__item">
+          <h1>Wynne</h1>
+          <h2>Веб-программист &bull; Веб-дизайнер &bull; Fullstack-разработчик</h2>
+        </div>
+        <div class="container__btn">
+          <button>Заказать сайт</button>
+        </div>
+      </div>
+      <div class="main" id="about">
+        <div class="main__content">
+          <div class="main__container">
+            <div class="main__section">
+              <h3>Обо мне</h3>
+              <p>Я занимаюсь разработкой и созданием веб-сайтов более 3-х лет. Владею HTML, CSS, JavaScript, PHP на
+                продвинутом уровне. Я помогаю воплощать Ваши идеи и дизайны в веб-жизнь.<br />Со мной удобно работать и
+                мне важно, чтобы клиент остался доволен! Моя цель ― предоставить лучшую услугу на рынке!</p>
+            </div>
+            <div class="main__section">
+              <img src="images/main_2.png" alt />
+            </div>
+          </div>
+          <div class="main__container">
+            <div class="main__section">
+              <img src="images/main.png" alt />
+            </div>
+            <div class="main__section">
+              <p>Берусь за сложные и нестандартные проекты, для простых нахожу интересные решения</p>
+              <span>В работе могу использовать англоязычные ресурсы и техническую документацию. Вы можете заказать у
+                меня сайт любого масштаба (от «визитки» или «лендинга» до корпоративного портала или
+                интернет-магазина)</span>
+            </div>
+          </div>
+          <h3>Преимущества</h3>
+          <div class="main__container">
+            <div class="main__section">
+              <img src="images/icons/idea.png" alt />
+              <p>Креативность</p>
+              <span>Подготовлю текстовой и мультимедийный контент для сайта</span>
+            </div>
+            <div class="main__section">
+              <img src="images/icons/design.png" alt />
+              <p>Красивый дизайн</p>
+              <span>Разрабатываю макет самостоятельно или же дам консультации по уже готовому</span>
+            </div>
+            <div class="main__section">
+              <img src="images/icons/term.png" alt />
+              <p>Быстро и качественно</p>
+              <span>Подхожу к заказу ответственно и выполняю его максимально за короткий срок</span>
+            </div>
+            <div class="main__section">
+              <img src="images/icons/feedback.png" alt />
+              <p>Обратная связь</p>
+              <span>Свяжитесь со мной любым для Вас удобным способом, всегда на связи</span>
             </div>
           </div>
         </div>
-        <div class="parallax2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5">
-            <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white"/></path>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5" class="line">
-            <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white"/></path>
-          </svg>
+      </div>
+      <div class="parallax">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5">
+          <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5" class="line">
+          <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+          </path>
+        </svg>
+      </div>
+      <div class="lvl">
+        <div class="lvl__content">
+          <div class="lvl__container">
+            <div class="lvl__section">
+              <h3>Этапы работы</h3>
+              <p><span>1</span>Составление технического задания: задачи, цели и сроки</p>
+              <p><span>2</span>Разработка макета, дизайна проекта</p>
+              <p><span>3</span>Создание сайта на основе макета</p>
+              <p><span>4</span>Съёмка видео и показ скриншотов выполненного проекта</p>
+              <p><span>5</span>После одобрения оплачиваете работу, а я отправляю ссылку на сайт, файлы проекта и
+                предоставляю доступ к хостингу</p>
+              <p><span>6</span>По необходимости подключу домен, настрою аналитику и рекламу</p>
+              <p><span>7</span>Готово! Сайт уже можно будет продвигать!</p>
+            </div>
+            <div class="lvl__section">
+              <h3>Гарантия</h3>
+              <p>В течение недели после передачи файлов с готовой работой я бесплатно и сразу исправляю свои ошибки,
+                которые могли быть пропущены при приеме работы и замечены позже</p>
+            </div>
+            <div class="lvl__section">
+              <h3>Работая со мной вы экономите</h3>
+              <div>
+                <span class="lvl__line">—</span>
+                <p><span class="lvl__text">Деньги</span>Разрабатываю удобные и качественные сайты на основе шаблонов,
+                  макетов, что существенно экономит Ваш бюджет и не требует заказа дополнительных макетов дизайна</p>
+              </div>
+              <div>
+                <span class="lvl__line">—</span>
+                <p><span class="lvl__text">Время</span>Выполняю работу быстро, кроссбраузерно и адаптивно. Это значит,
+                  что готовый сайт будет корректно отображаться на любых устройствах и сделает загрузку ресурса
+                  моментальной. Минимум вопросов, максимум результата!</p>
+              </div>
+              <div>
+                <span class="lvl__line">—</span>
+                <p><span class="lvl__text">Нервы</span>Просьбы пожелания и доработки не структурного характера уже
+                  включены в стоимость работ! Так что, если Вы пропустили ряд мелочей в дизайне они будут внесены в
+                  работу по Вашей просьбе без лишних споров и дополнительных затрат!</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="lvl">
-          <div class="lvl__content">
-            <div class="lvl__container">
-              <div class="lvl__section">
-                <h3>Основные навыки</h3>
-                <div class="lvl__items">
-                  <p>Front-end</p>
-                  <div class="lvl__lang">
-                    <img src="images/lang/html.png" alt />
-                    <p>HTML</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/css.png" alt />
-                    <p>CSS</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/javascript.png" alt />
-                    <p>JavaScript</p>
-                  </div>
+      </div>
+      <div class="parallax2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5">
+          <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5" class="line">
+          <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+          </path>
+        </svg>
+      </div>
+      <div class="lvl">
+        <div class="lvl__content">
+          <div class="lvl__container">
+            <div class="lvl__section">
+              <h3>Основные навыки</h3>
+              <div class="lvl__items">
+                <p>Front-end</p>
+                <div class="lvl__lang">
+                  <img src="images/lang/html.png" alt />
+                  <p>HTML</p>
                 </div>
-                <div class="lvl__items">
-                  <p>Back-end</p>
-                  <div class="lvl__lang">
-                    <img src="images/lang/php.png" alt />
-                    <p>PHP</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/nodejs.png" alt />
-                    <p>Node.js</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/npm.png" alt />
-                    <p>NPM</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/git.png" alt />
-                    <p>Git</p>
-                  </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/css.png" alt />
+                  <p>CSS</p>
                 </div>
-                <div class="lvl__items">
-                  <p>Дизайн</p>
-                  <div class="lvl__lang">
-                    <img src="images/lang/bootstrap.png" alt />
-                    <p>Bootstrap</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/tailwindcss.png" alt />
-                    <p>TailWindCSS</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/sass.png" alt />
-                    <p>Sass / Scss</p>
-                  </div>
-                </div>
-                <div class="lvl__items">
-                  <p>Фреймворки</p>
-                  <div class="lvl__lang">
-                    <img src="images/lang/angular.png" alt />
-                    <p>Angular</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/react.png" alt />
-                    <p>React</p>
-                  </div>
-                  <div class="lvl__lang">
-                    <img src="images/lang/vue.png" alt />
-                    <p>Vue</p>
-                  </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/javascript.png" alt />
+                  <p>JavaScript</p>
                 </div>
               </div>
+              <div class="lvl__items">
+                <p>Back-end</p>
+                <div class="lvl__lang">
+                  <img src="images/lang/php.png" alt />
+                  <p>PHP</p>
+                </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/nodejs.png" alt />
+                  <p>Node.js</p>
+                </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/npm.png" alt />
+                  <p>NPM</p>
+                </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/git.png" alt />
+                  <p>Git</p>
+                </div>
+              </div>
+              <div class="lvl__items">
+                <p>Дизайн</p>
+                <div class="lvl__lang">
+                  <img src="images/lang/bootstrap.png" alt />
+                  <p>Bootstrap</p>
+                </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/tailwindcss.png" alt />
+                  <p>TailWindCSS</p>
+                </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/sass.png" alt />
+                  <p>Sass / Scss</p>
+                </div>
+              </div>
+              <div class="lvl__items">
+                <p>Фреймворки</p>
+                <div class="lvl__lang">
+                  <img src="images/lang/angular.png" alt />
+                  <p>Angular</p>
+                </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/react.png" alt />
+                  <p>React</p>
+                </div>
+                <div class="lvl__lang">
+                  <img src="images/lang/vue.png" alt />
+                  <p>Vue</p>
+                </div>
+              </div>
+            </div>
+            <div class="lvl__section">
+              <h3>Интеграция кода в CMS</h3>
+              <p>Мой код легко интегрируется в любую систему управления контентом: <span>WordPress</span>,
+                <span>Joomla</span>, <span>Bitrix</span>, <span>PrestaShop</span>, <span>OpenCart</span> и так далее</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5">
+          <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+          </path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5" class="line">
+          <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+          </path>
+        </svg>
+      </div>
+      <div class="lvl">
+        <div class="lvl__content">
+          <div class="lvl__container">
+            <div class="lvl__section">
+              <h3>Портфолио</h3>
+            </div>
+            <div class="lvl__section">
+              <p>Projector.ml — сайт-лендинг по продаже проектора</p>
+            </div>
+            <div class="lvl__section">
+              <p>Darkland.tk — сайт-лендинг для Discord-сервера</p>
+            </div>
+            <div class="lvl__section">
+              <p>Worldplay.tk — многостраничный портал с браузерными играми</p>
             </div>
           </div>
         </div>

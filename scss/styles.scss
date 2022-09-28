@@ -320,6 +320,10 @@ h3 {
   background: url("images/bg3.jpg");
   @include parallax;
 }
+.parallax3 {
+  background: url("images/bg4.png");
+  @include parallax;
+}
 .lvl {
   display: flex;
   justify-content: center;
@@ -352,6 +356,13 @@ h3 {
     &:nth-child(2) {
       p {
         margin: auto 1.5rem;
+      }
+      span {
+        margin-left: .25rem;
+        color: #5433ff;
+        &:last-child {
+          margin-right: .25rem;
+        }
       }
     }
     div {

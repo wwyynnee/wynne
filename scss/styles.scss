@@ -344,6 +344,12 @@ h3 {
       color: black;
       font-size: 1.1rem;
       margin: .5rem 0;
+      a {
+        color: #20bdff !important;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     // Скрытые блоки
@@ -396,6 +402,8 @@ h3 {
       width: 10%;
     }
   }
+
+  // Основные навыки
   &__lang {
     align-items: center !important;
     flex-wrap: wrap;
@@ -412,6 +420,17 @@ h3 {
     p {
       font-size: 1.2rem;
       width: auto;
+    }
+  }
+  // Блоки по горизонтали
+  &__row {
+    display: flex;
+    align-items: baseline;
+    p {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      text-align: center;
+      margin: auto;
     }
   }
   &__line {

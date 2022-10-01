@@ -316,6 +316,12 @@ h3 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
+.lvl__section p a {
+  color: #20bdff !important;
+}
+.lvl__section p a:hover {
+  text-decoration: underline;
+}
 .lvl__section .details summary {
   display: flex;
 }
@@ -371,6 +377,16 @@ h3 {
 .lvl__lang p {
   font-size: 1.2rem;
   width: auto;
+}
+.lvl__row {
+  display: flex;
+  align-items: baseline;
+}
+.lvl__row p {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: center;
+  margin: auto;
 }
 .lvl__line {
   font-size: 1.5rem;

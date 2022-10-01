@@ -316,6 +316,12 @@ h3 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
+.lvl__section .details summary {
+  display: flex;
+}
+.lvl__section .details p:nth-child(2) {
+  margin: 0 0 0 5.125rem;
+}
 .lvl__section:first-child span {
   display: flex;
   align-items: center;

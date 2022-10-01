@@ -345,6 +345,16 @@ h3 {
       font-size: 1.1rem;
       margin: .5rem 0;
     }
+
+    // Скрытые блоки
+    .details {
+      summary {
+        display: flex;
+      }
+      p:nth-child(2) {
+        margin: 0 0 0 5.125rem;
+      }
+    }
     
     // Этапы работы
     &:first-child {

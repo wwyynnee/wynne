@@ -28,15 +28,6 @@ html, body {
   justify-content: center;
 }
 
-h3 {
-  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin: 1rem 0 !important;
-}
-
 .wrapper {
   max-width: 1920px;
 }
@@ -46,6 +37,70 @@ h3 {
 }
 .wrapper__content {
   margin-top: 4rem;
+}
+
+h1, h2 {
+  color: white;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 350;
+}
+
+h3 {
+  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 1rem 0 !important;
+}
+
+.parallax {
+  background: url("images/backgrounds/bg2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.parallax2 {
+  background: url("images/backgrounds/bg3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.parallax3 {
+  background: url("images/backgrounds/bg4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.line {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .nav {
@@ -120,7 +175,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("images/bg.jpg");
+  background: url("images/backgrounds/bg.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,7 +183,6 @@ h3 {
   width: 100%;
   flex-direction: column;
   padding-bottom: 4rem;
-  text-shadow: 0 -1px 0 #1F2029, 0 -1px 0 #1F2029, 0 1px 0 #1F2029, 0 1px 0 #1F2029, -1px 0 0 #1F2029, 1px 0 0 #1F2029, -1px 0 0 #1F2029, 1px 0 0 #1F2029, -1px -1px 0 #1F2029, 1px -1px 0 #1F2029, -1px 1px 0 #1F2029, 1px 1px 0 #1F2029, -1px -1px 0 #1F2029, 1px -1px 0 #1F2029, -1px 1px 0 #1F2029, 1px 1px 0 #1F2029;
 }
 .container__item {
   display: flex;
@@ -162,16 +216,10 @@ h3 {
   color: #1F2029;
 }
 .container h1 {
-  font-weight: 400;
-  font-size: 2.5rem;
   margin: 1rem 0;
-  color: white;
 }
 .container h2 {
-  font-size: 1.5rem;
-  font-weight: 350;
   margin: 0.5rem 1rem;
-  color: white;
 }
 
 .main {
@@ -233,6 +281,7 @@ h3 {
 .main__container:nth-child(4) .main__section img {
   width: 5rem;
   margin: 1rem 0;
+  filter: brightness(1.1);
 }
 .main__container:nth-child(4) .main__section p {
   font-weight: 400;
@@ -247,47 +296,6 @@ h3 {
   display: flex;
   width: calc(50% - 2rem);
   margin: 0 1rem;
-}
-
-.line {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.parallax {
-  background: url("images/bg2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.parallax2 {
-  background: url("images/bg3.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.parallax3 {
-  background: url("images/bg4.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .lvl {

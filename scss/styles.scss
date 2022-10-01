@@ -25,32 +25,37 @@ $text-color: #999999;
   background-color: $main-color;
 }
 
+// Блок по центру
 @mixin center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+// Hover-эффект для блоков
 @mixin boxHover {
   background-color: #ffffff15;
   animation-duration: .5s;
   border-radius: 4px;
   color: $main-color;
 }
+// Главный фон
 @mixin bg {
-  background: url("images/bg.jpg");
+  background: url("images/backgrounds/bg.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
 }
+// Градиент для текста
 @mixin gradient {
-  background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  background: linear-gradient(to right, $main-color, #20bdff, #a5fecb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+// Кнопка для главного блока
 @mixin button {
-  background: linear-gradient(250deg, #5433ff, #20bdff, #a5fecb);
+  background: linear-gradient(250deg, $main-color, #20bdff, #a5fecb);
   border: solid 2px white;
   border-radius: 10px;
   cursor: pointer;
@@ -59,11 +64,12 @@ $text-color: #999999;
   font-weight: 400;
   transition: all 150ms ease-in-out;
   &:hover {
-    background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+    background: linear-gradient(to right, $main-color, #20bdff, #a5fecb);
     border-color: $nav-color;
     color: $nav-color;
   }
 }
+// Для параллакс блоков
 @mixin parallax {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -74,6 +80,7 @@ $text-color: #999999;
   justify-content: space-between;
 }
 
+// Структура
 html, body {
   font-family: "Inter", sans-serif;
   background-repeat: no-repeat;
@@ -85,12 +92,6 @@ html, body {
   width: 100%;
   @include center;
 }
-h3 {
-  @include gradient;
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin: 1rem 0 !important;
-}
 .wrapper {
   max-width: 1920px;
   &, &__content {
@@ -100,6 +101,48 @@ h3 {
   &__content {
     margin-top: 4rem;
   }
+}
+
+// Основные элементы
+h1, h2 {
+  color: white;
+}
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 350;
+}
+h3 {
+  @include gradient;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 1rem 0 !important;
+}
+
+// Фоны для параллакс
+.parallax {
+  background: url("images/backgrounds/bg2.jpg");
+  @include parallax;
+}
+.parallax2 {
+  background: url("images/backgrounds/bg3.jpg");
+  @include parallax;
+}
+.parallax3 {
+  background: url("images/backgrounds/bg4.jpg");
+  @include parallax;
+}
+
+// Поворот SVG-линии
+.line {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 // Навигация
@@ -169,24 +212,6 @@ h3 {
   @include bg;
   flex-direction: column;
   padding-bottom: 4rem;
-  //text-shadow: 4px 2px 7px grey;
-  text-shadow: 
-		-0   -1px 0   $nav-color,
-		 0   -1px 0   $nav-color,
-		-0    1px 0   $nav-color,
-		 0    1px 0   $nav-color,
-		-1px -0   0   $nav-color,
-		 1px -0   0   $nav-color,
-		-1px  0   0   $nav-color,
-		 1px  0   0   $nav-color,
-		-1px -1px 0   $nav-color,
-		 1px -1px 0   $nav-color,
-		-1px  1px 0   $nav-color,
-		 1px  1px 0   $nav-color,
-		-1px -1px 0   $nav-color,
-		 1px -1px 0   $nav-color,
-		-1px  1px 0   $nav-color,
-		 1px  1px 0   $nav-color;
   &__item {
     display: flex;
     width: 100%;
@@ -207,20 +232,14 @@ h3 {
       padding: 1rem;
     }
   }
-  // Текст
   h1 {
-    font-weight: 400;
-    font-size: 2.5rem;
     margin: 1rem 0;
-    color: white;
   }
   h2 {
-    font-size: 1.5rem;
-    font-weight: 350;
     margin: .5rem 1rem;
-    color: white;
   }
 }
+
 .main {
   color: black;
   &__content {
@@ -232,7 +251,8 @@ h3 {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 1rem 0;
-    // Первый блок
+    
+    // Первый блок - Обо мне
     &:first-child {
       .main__section {
         flex-direction: column;
@@ -240,13 +260,13 @@ h3 {
           font-size: 1.3rem;
           font-weight: 400;
         }
-        // Изображение
         img {
           width: 75%;
         }
       }
     }
-    // Второй блок
+    
+    // Второй блок - Продолжение обо мне
     &:nth-child(2) {
       justify-content: center;
       align-items: center;
@@ -256,16 +276,13 @@ h3 {
         flex-direction: column;
         width: calc(45% - 2rem);
         margin: 0 1rem;
-        // Изображение
         img {
           width: 75%;
         }
-        // Текст к изображению
         p {
           font-weight: 400;
           font-size: 1.4rem;
         }
-        // Текст под текстом
         span {
           color: $text-color;
           font-size: 1.2rem;
@@ -275,6 +292,7 @@ h3 {
         }
       }
     }
+    
     // Третий блок - Преимущества
     &:nth-child(4) {
       .main__section {
@@ -282,10 +300,12 @@ h3 {
         align-items: center;
         text-align: center;
         width: calc(25% - 2rem);
-        // Иконка
+        
+        // Иконки
         img {
           width: 5rem;
           margin: 1rem 0;
+          filter: brightness(1.1);
         }
         p {
           font-weight: 400;
@@ -305,25 +325,8 @@ h3 {
     margin: 0 1rem;
   }
 }
-.line {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.parallax {
-  background: url("images/bg2.jpg");
-  @include parallax;
-}
-.parallax2 {
-  background: url("images/bg3.jpg");
-  @include parallax;
-}
-.parallax3 {
-  background: url("images/bg4.png");
-  @include parallax;
-}
+
+// Блок информации
 .lvl {
   display: flex;
   justify-content: center;
@@ -342,7 +345,10 @@ h3 {
       font-size: 1.1rem;
       margin: .5rem 0;
     }
+    
+    // Этапы работы
     &:first-child {
+      // Добавление обозначения этапа
       span {
         @include center;
         background-color: $nav-color;
@@ -353,13 +359,15 @@ h3 {
         color: white;
       }
     }
+
+    // Гарантия
     &:nth-child(2) {
       p {
         margin: auto 1.5rem;
       }
       span {
         margin-left: .25rem;
-        color: #5433ff;
+        color: $main-color;
         &:last-child {
           margin-right: .25rem;
         }
@@ -367,6 +375,7 @@ h3 {
     }
     div {
       display: flex;
+      // Выравнивание обозначения по тексту
       align-items: baseline;
     }
   }
@@ -382,7 +391,7 @@ h3 {
     flex-wrap: wrap;
     width: 22.5%;
     img {
-      border: solid 1px #5433ff;
+      border: solid 1px $main-color;
       border-radius: 50px;
       object-fit: contain;
       padding: 0 .75rem;
@@ -398,10 +407,10 @@ h3 {
   &__line {
     font-size: 1.5rem;
     margin: 0 1rem;
-    color: #5433ff;
+    color: $main-color;
   } 
   &__text {
     font-size: 1.1rem;
-    color: #5433ff;
+    color: $main-color;
   }
 }

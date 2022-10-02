@@ -350,10 +350,23 @@ h3 {
   border-spacing: 0;
   color: black;
 }
-.lvl__section table caption {
+.lvl__section table caption .caption {
+  display: flex;
+  align-items: center;
   margin: 1rem 0;
-  color: #5433ff;
+  font-weight: 600;
   text-align: left;
+}
+.lvl__section table caption .caption:hover {
+  transition: all 150ms ease-in-out;
+}
+.lvl__section table caption .caption:hover img {
+  display: block;
+}
+.lvl__section table caption .caption img {
+  filter: invert(1);
+  margin: 0 0.35rem;
+  display: none;
 }
 .lvl__section table, .lvl__section table th, .lvl__section table td {
   border: solid 1px #1F2029;

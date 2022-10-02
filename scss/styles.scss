@@ -377,9 +377,24 @@ h3 {
       border-spacing: 0;
       color: black;
       caption {
-        margin: 1rem 0;
-        color: $main-color;
-        text-align: left;
+        .caption {
+          display: flex;
+          align-items: center;
+          margin: 1rem 0;
+          font-weight: 600;
+          text-align: left;
+          &:hover {
+            transition: all 150ms ease-in-out;
+            img {
+              display: block;
+            }
+          }
+          img {
+            filter: invert(1);
+            margin: 0 .35rem;
+            display: none;
+          }
+        }
       }
       &, th, td {
         border: solid 1px $nav-color;

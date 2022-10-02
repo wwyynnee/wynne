@@ -1,3 +1,4 @@
+// Навигация
 $(".nav__container").on("click", () => {
   $(".nav__elements").css("border-radius", "4px");
 
@@ -65,3 +66,8 @@ $(".nav__container").on("click", () => {
     });
   }
 })
+
+// Кнопка наверх
+$("#up").click(() => {
+  $("html, body").animate({ scrollTop: 0}, 800);
+});

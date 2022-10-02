@@ -476,37 +476,71 @@ h3 {
 }
 
 .footer {
-  background: url("images/backgrounds/bg6.png");
-  background-attachment: fixed;
+  background: url("images/backgrounds/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 1rem;
 }
 .footer__content {
   display: flex;
   justify-content: center;
+  padding: 1rem 0;
 }
 .footer__logo {
-  width: 15%;
+  width: 10%;
 }
 .footer__container {
   margin: 0 1rem;
 }
 .footer__container p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1F2029;
 }
 .footer__container ul {
   list-style: none;
 }
-.footer__container ul li {
-  font-size: 1.1rem;
-  color: #20bdff;
-}
-.footer__container ul a {
-  color: #20bdff !important;
-}
 .footer__container ul a:hover {
   text-decoration: underline;
+}
+.footer__container button {
+  border: solid 2px #1F2029;
+  background-color: white;
+  outline: none;
+  margin: 0.5rem;
+}
+.footer__container button:nth-last-child(2) {
+  font-size: 1.2rem;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  align-self: center;
+}
+.footer__container button:hover {
+  background-color: #1F2029;
+  color: white;
+}
+.footer__container .order {
+  border-radius: 15px;
+  height: 50px;
+  padding: 0 2rem;
+}
+.footer__contacts {
+  display: flex;
+}
+.footer__contacts button {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  margin: 0.5rem;
+}
+.footer__contacts button img {
+  padding: 0.5rem;
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+}
+.footer__contacts button:hover img {
+  filter: invert(0);
 }
 
 /*# sourceMappingURL=style.css.map */

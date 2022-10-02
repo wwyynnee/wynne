@@ -308,6 +308,10 @@ h3 {
   max-width: 1200px;
   width: 100%;
 }
+.lvl__section {
+  display: flex;
+  flex-direction: column;
+}
 .lvl__section p {
   display: flex;
   flex-wrap: wrap;
@@ -321,6 +325,51 @@ h3 {
 }
 .lvl__section p a:hover {
   text-decoration: underline;
+}
+.lvl__section img {
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+.lvl__section button {
+  background: transparent;
+  border: solid 2px #1F2029;
+  border-radius: 15px;
+  padding: 1rem 5rem;
+  align-self: center;
+  font-size: 1.1rem;
+  outline: none;
+  width: 20rem;
+  margin: 1rem;
+}
+.lvl__section button:hover {
+  background-color: #1F2029;
+  animation-duration: 0.5s;
+  color: white;
+}
+.lvl__section table {
+  border-spacing: 0;
+  color: black;
+}
+.lvl__section table caption {
+  margin: 1rem 0;
+  color: #5433ff;
+  text-align: left;
+}
+.lvl__section table, .lvl__section table th, .lvl__section table td {
+  border: solid 1px #1F2029;
+}
+.lvl__section table th, .lvl__section table td {
+  padding: 0 0.75rem;
+}
+.lvl__section table th {
+  font-weight: 400;
+  padding: 0.75rem 0;
+}
+.lvl__section table td:nth-child(2) {
+  font-style: italic;
+}
+.lvl__section table .td td {
+  padding: 0.75rem;
 }
 .lvl__section .details summary {
   display: flex;
@@ -382,7 +431,10 @@ h3 {
   display: flex;
   align-items: baseline;
 }
-.lvl__row p {
+.lvl__row .lvl__section {
+  margin: 0 0.5rem;
+}
+.lvl__row .lvl__section p {
   flex-direction: column;
   flex-wrap: nowrap;
   text-align: center;

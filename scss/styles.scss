@@ -337,6 +337,8 @@ h3 {
     width: 100%;
   }
   &__section {
+    display: flex;
+    flex-direction: column;
     p {
       display: flex;
       flex-wrap: wrap;
@@ -348,6 +350,55 @@ h3 {
         color: #20bdff !important;
         &:hover {
           text-decoration: underline;
+        }
+      }
+    }
+    img {
+      border-radius: 4px;
+      margin-top: 1rem;
+    }
+    button {
+      background: transparent;
+      border: solid 2px $nav-color;
+      border-radius: 15px;
+      padding: 1rem 5rem;
+      align-self: center;
+      font-size: 1.1rem;
+      outline: none;    
+      width: 20rem;
+      margin: 1rem;
+      &:hover {
+        background-color: $nav-color;
+        animation-duration: .5s;
+        color: white;
+      }
+    }
+    table {
+      border-spacing: 0;
+      color: black;
+      caption {
+        margin: 1rem 0;
+        color: $main-color;
+        text-align: left;
+      }
+      &, th, td {
+        border: solid 1px $nav-color;
+      }
+      th, td {
+        padding: 0 .75rem;
+      }
+      th {
+        font-weight: 400;
+        padding: .75rem 0;
+      }
+      td {
+        &:nth-child(2) {
+          font-style: italic;
+        }
+      }
+      .td {
+        td {
+          padding: .75rem;
         }
       }
     }
@@ -422,17 +473,21 @@ h3 {
       width: auto;
     }
   }
-  // Блоки по горизонтали
+  // Последние работы
   &__row {
     display: flex;
     align-items: baseline;
-    p {
-      flex-direction: column;
-      flex-wrap: nowrap;
-      text-align: center;
-      margin: auto;
+    .lvl__section {
+      margin: 0 .5rem;
+      p {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        text-align: center;
+        margin: auto;
+      }
     }
   }
+  // Линии и другое
   &__line {
     font-size: 1.5rem;
     margin: 0 1rem;

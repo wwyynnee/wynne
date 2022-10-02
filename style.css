@@ -223,6 +223,9 @@ h3 {
 }
 
 .main {
+  background: white;
+  border-radius: 100%/75px;
+  margin-top: -3rem;
   color: black;
 }
 .main__content {
@@ -235,7 +238,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 1rem 0;
+  margin: 3rem 0;
 }
 .main__container:first-child .main__section {
   flex-direction: column;
@@ -330,18 +333,21 @@ h3 {
   border-radius: 4px;
   margin-top: 1rem;
 }
-.lvl__section button {
+.lvl__section a {
+  display: flex;
+  justify-content: center;
+}
+.lvl__section a button {
   background: transparent;
   border: solid 2px #1F2029;
   border-radius: 15px;
   padding: 1rem 5rem;
-  align-self: center;
   font-size: 1.1rem;
   outline: none;
   width: 20rem;
   margin: 1rem;
 }
-.lvl__section button:hover {
+.lvl__section a button:hover {
   background-color: #1F2029;
   animation-duration: 0.5s;
   color: white;
@@ -354,6 +360,7 @@ h3 {
   display: flex;
   align-items: center;
   margin: 1rem 0;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: left;
 }
@@ -461,6 +468,13 @@ h3 {
 .lvl__text {
   font-size: 1.1rem;
   color: #5433ff;
+}
+
+.footer {
+  background: url("images/backgrounds/bg6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

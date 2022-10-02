@@ -241,6 +241,9 @@ h3 {
 }
 
 .main {
+  background: white;
+  border-radius: 100% / 75px;
+  margin-top: -3rem;
   color: black;
   &__content {
     @include center;
@@ -250,7 +253,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 1rem 0;
+    margin: 3rem 0;
     
     // Первый блок - Обо мне
     &:first-child {
@@ -357,20 +360,23 @@ h3 {
       border-radius: 4px;
       margin-top: 1rem;
     }
-    button {
-      background: transparent;
-      border: solid 2px $nav-color;
-      border-radius: 15px;
-      padding: 1rem 5rem;
-      align-self: center;
-      font-size: 1.1rem;
-      outline: none;    
-      width: 20rem;
-      margin: 1rem;
-      &:hover {
-        background-color: $nav-color;
-        animation-duration: .5s;
-        color: white;
+    a {
+      display: flex;
+      justify-content: center;
+      button {
+        background: transparent;
+        border: solid 2px $nav-color;
+        border-radius: 15px;
+        padding: 1rem 5rem;
+        font-size: 1.1rem;
+        outline: none;    
+        width: 20rem;
+        margin: 1rem;
+        &:hover {
+          background-color: $nav-color;
+          animation-duration: .5s;
+          color: white;
+        }
       }
     }
     table {
@@ -381,6 +387,7 @@ h3 {
           display: flex;
           align-items: center;
           margin: 1rem 0;
+          font-size: 1.2rem;
           font-weight: 600;
           text-align: left;
           &:hover {
@@ -512,4 +519,10 @@ h3 {
     font-size: 1.1rem;
     color: $main-color;
   }
+}
+.footer {
+  background: url("images/backgrounds/bg6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }

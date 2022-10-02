@@ -21,7 +21,7 @@
       <div class="nav">
         <div class="nav__content">
           <div class="nav__icon">
-            <img src="images/icon.png" alt />
+            <img src="images/logo/icon.png" alt />
           </div>
           <div class="nav__name">
             <p>Wynne</p>
@@ -32,12 +32,15 @@
             <a href="#about" class="nav__elements about">
               <li class="nav__container">Обо мне</li>
             </a>
+            <a href="error" class="nav__elements">
+              <li class="nav__container">Блог</li>
+            </a>
             <a href="#portfolio" class="nav__elements portfolio">
               <li class="nav__container">Портфолио</li>
             </a>
             <a href="#price" class="nav__elements price">
               <li class="nav__container">Прайс</li>
-            </a>
+            </a> 
             <a href="#contacts" class="nav__elements contacts">
               <li class="nav__container">Контакты</li>
             </a>
@@ -279,7 +282,7 @@
       </div>
       <div class="lvl">
         <div class="lvl__content">
-          <div class="lvl__container">
+          <div class="lvl__container" id="portfolio">
             <div class="lvl__section">
               <h3>Последние работы</h3>
             </div>
@@ -298,10 +301,12 @@
               </div>
             </div>
             <div class="lvl__section">
-              <button>Все работы</button>
+              <a href="error">
+                <button>Все работы</button>
+              </a>
             </div>
           </div>
-          <div class="lvl__container">
+          <div class="lvl__container" id="price">
             <div class="lvl__section">
               <h3>Прайс</h3>
             </div>
@@ -417,6 +422,14 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div class="footer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5">
+            <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+            </path>
+          </svg>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

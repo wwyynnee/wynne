@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo/icon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="template/reset.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Wynne</title>
+    <style>
+      body {
+        background: url("images/backgrounds/bg4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      h1 {
+        color: #111;
+      }
+      button {
+        background: transparent;
+        border: solid 2px #111;
+        border-radius: 15px;
+        padding: 1rem 5rem;
+        align-self: center;
+        font-size: 1.1rem;
+        outline: none;    
+        width: 20rem;
+        margin: 1rem;
+      }
+      button:hover {
+        background-color: #111;
+        animation-duration: .5s;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>В разработке...</h1>
+    <a href="/">
+      <button>На главную</button>
+    </a>
+  </body>
+</html>

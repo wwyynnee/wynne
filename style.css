@@ -333,11 +333,11 @@ h3 {
   border-radius: 4px;
   margin-top: 1rem;
 }
-.lvl__section a {
+.lvl__section .linkbutton {
   display: flex;
   justify-content: center;
 }
-.lvl__section a button {
+.lvl__section .linkbutton button {
   background: transparent;
   border: solid 2px #1F2029;
   border-radius: 15px;
@@ -347,7 +347,7 @@ h3 {
   width: 20rem;
   margin: 1rem;
 }
-.lvl__section a button:hover {
+.lvl__section .linkbutton button:hover {
   background-color: #1F2029;
   animation-duration: 0.5s;
   color: white;

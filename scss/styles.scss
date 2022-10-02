@@ -104,6 +104,9 @@ html, body {
 }
 
 // Основные элементы
+button {
+  cursor: pointer;
+}
 h1, h2 {
   color: white;
 }
@@ -360,7 +363,7 @@ h3 {
       border-radius: 4px;
       margin-top: 1rem;
     }
-    a {
+    .linkbutton {
       display: flex;
       justify-content: center;
       button {
@@ -372,6 +375,7 @@ h3 {
         outline: none;    
         width: 20rem;
         margin: 1rem;
+        cursor: pointer;
         &:hover {
           background-color: $nav-color;
           animation-duration: .5s;
@@ -522,7 +526,34 @@ h3 {
 }
 .footer {
   background: url("images/backgrounds/bg6.png");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  padding-bottom: 1rem;
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__logo {
+    width: 15%;
+  }
+  &__container {
+    margin: 0 1rem;
+    p {
+      font-size: 1.2rem;
+    }
+    ul {
+      list-style: none;
+      li {
+        font-size: 1.1rem;
+        color: #20bdff;
+      }
+      a {
+        color: #20bdff !important;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

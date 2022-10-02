@@ -35,6 +35,7 @@
         outline: none;    
         width: 20rem;
         margin: 1rem;
+        cursor: pointer;
       }
       button:hover {
         background-color: #111;

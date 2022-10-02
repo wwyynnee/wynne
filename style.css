@@ -39,6 +39,10 @@ html, body {
   margin-top: 4rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 h1, h2 {
   color: white;
 }
@@ -333,11 +337,11 @@ h3 {
   border-radius: 4px;
   margin-top: 1rem;
 }
-.lvl__section a {
+.lvl__section .linkbutton {
   display: flex;
   justify-content: center;
 }
-.lvl__section a button {
+.lvl__section .linkbutton button {
   background: transparent;
   border: solid 2px #1F2029;
   border-radius: 15px;
@@ -346,8 +350,9 @@ h3 {
   outline: none;
   width: 20rem;
   margin: 1rem;
+  cursor: pointer;
 }
-.lvl__section a button:hover {
+.lvl__section .linkbutton button:hover {
   background-color: #1F2029;
   animation-duration: 0.5s;
   color: white;
@@ -472,9 +477,36 @@ h3 {
 
 .footer {
   background: url("images/backgrounds/bg6.png");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  padding-bottom: 1rem;
+}
+.footer__content {
+  display: flex;
+  justify-content: center;
+}
+.footer__logo {
+  width: 15%;
+}
+.footer__container {
+  margin: 0 1rem;
+}
+.footer__container p {
+  font-size: 1.2rem;
+}
+.footer__container ul {
+  list-style: none;
+}
+.footer__container ul li {
+  font-size: 1.1rem;
+  color: #20bdff;
+}
+.footer__container ul a {
+  color: #20bdff !important;
+}
+.footer__container ul a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

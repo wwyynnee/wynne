@@ -93,7 +93,6 @@ html, body {
   @include center;
 }
 .wrapper {
-  max-width: 1920px;
   &, &__content {
     height: 100%;
     width: 100%;
@@ -256,7 +255,10 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 3rem 0;
+    margin: 4rem 0;
+    @media screen and (max-width: 1216px) {
+      margin: 4rem 1rem 2rem;
+    }
     
     // Первый блок - Обо мне
     &:first-child {
@@ -341,6 +343,9 @@ h3 {
   &__content {
     max-width: 1200px;
     width: 100%;
+    @media screen and (max-width: 1200px) {
+      margin: auto 1rem;
+    }
   }
   &__section {
     display: flex;
@@ -498,6 +503,9 @@ h3 {
       font-size: 1.2rem;
       width: auto;
     }
+    @media screen and (max-width: 1216px) {
+      flex-direction: column;
+    }
   }
   // Последние работы
   &__row {
@@ -537,7 +545,10 @@ h3 {
   }
   // Иконка
   &__logo {
-    width: 10%;
+    @include center;
+    img {
+      width: 128px;
+    }
   }
   &__container {
     margin: 0 1rem;
@@ -545,6 +556,7 @@ h3 {
       font-size: 1.1rem;
       font-weight: 500;
       color: $nav-color;
+      line-height: 1.25;
     }
     ul {
       list-style: none;

@@ -162,6 +162,9 @@ h3 {
     z-index: 1;
     &:first-child {
       margin: 0 2.5rem;
+      @media screen and (max-width: 920px) {
+        margin: 0 1rem;
+      }
     }
     &:nth-child(3) {
       display: flex;
@@ -188,6 +191,9 @@ h3 {
         &:hover {
           @include boxHover;
         }
+      }
+      @media screen and (max-width: 992px) {
+        display: none;
       }
     }
   }
@@ -251,25 +257,51 @@ h3 {
     @include center;
     flex-direction: column;
   }
+  &__items {
+    @media screen and (max-width: 875px) {
+      @include center;
+    }
+  }
   &__container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     max-width: 1200px;
     margin: 4rem 0;
     @media screen and (max-width: 1216px) {
       margin: 4rem 1rem 2rem;
+    }
+
+    &:first-child, &:nth-child(2) {
+      @media screen and (max-width: 875px) {
+        flex-direction: column;
+        width: 100% !important;
+      }
+      .main__section {
+        @media screen and (max-width: 875px) {
+          width: 100%;
+          margin: 1rem 0;
+          img {
+            align-self: center;
+          }
+        }
+      }
     }
     
     // Первый блок - Обо мне
     &:first-child {
       .main__section {
         flex-direction: column;
+        width: calc(50% - 2rem);
         p {
           font-size: 1.3rem;
           font-weight: 400;
         }
         img {
           width: 75%;
+        }
+        @media screen and (max-width: 875px) {
+          width: calc(100% - 2rem);
         }
       }
     }
@@ -286,6 +318,9 @@ h3 {
         margin: 0 1rem;
         img {
           width: 75%;
+          @media screen and (max-width: 875px) {
+            width: 60%;
+          }
         }
         p {
           font-weight: 400;
@@ -297,40 +332,55 @@ h3 {
           font-weight: 400;
           margin: 2rem 0;
           line-height: 1.75;
+          @media screen and (max-width: 920px) {
+            margin: 1rem 0;
+            line-height: 1.5;
+          }
+        }
+        @media screen and (max-width: 875px) {
+          width: 100%;
         }
       }
     }
-    
-    // Третий блок - Преимущества
-    &:nth-child(4) {
-      .main__section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: calc(25% - 2rem);
-        
-        // Иконки
-        img {
-          width: 5rem;
-          margin: 1rem 0;
-          filter: brightness(1.1);
-        }
-        p {
-          font-weight: 400;
-          font-size: 1.2rem;
-          margin: 0 0 1rem;
-        }
-        span {
-          color: $text-color;
-          font-size: .95rem;
-        }
+
+    p {
+      @media screen and (max-width: 920px) {
+        font-weight: 300 !important;
+        font-size: 1.2rem !important;
       }
     }
   }
   &__section {
     display: flex;
-    width: calc(50% - 2rem);
-    margin: 0 1rem;
+  }
+}
+
+// Третий блок - Преимущества
+.advantages {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around;
+  .main__section {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    width: calc(25% - 2rem) !important;
+    
+    // Иконки
+    img {
+      width: 5rem !important;
+      margin: 1rem 0;
+      filter: brightness(1.1);
+    }
+    p {
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
+    }
+    span {
+      color: $text-color;
+      font-size: .95rem;
+    }
   }
 }
 
@@ -582,6 +632,16 @@ h3 {
       &:hover {
         background-color: $nav-color;
         color: white;
+        /*&::before {
+          content: attr(data-title);
+          background: #616161;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          padding: 6px 8px;
+          text-transform: none;
+          width: 100%;
+        }*/
       }
     }
     .order {

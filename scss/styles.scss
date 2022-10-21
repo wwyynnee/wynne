@@ -647,6 +647,7 @@ h3 {
     .order {
       border-radius: 15px;
       height: 50px;
+      width: calc(100% - 50px - 2rem);
       padding: 0 2rem;
     }
   }

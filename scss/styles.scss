@@ -608,6 +608,17 @@ h3 {
         text-align: center;
         margin: auto;
       }
+      img {
+        @media screen and (max-width: 814px) {
+          width: 75%;
+        }
+      }
+      @media screen and (max-width: 814px) {
+        @include center;
+      }
+    }
+    @media screen and (max-width: 814px) {
+      flex-direction: column;
     }
   }
   // Линии и другое

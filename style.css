@@ -62,6 +62,14 @@ h3 {
   font-size: 1.5rem;
   margin: 1rem 0 !important;
 }
+h3:nth-child(2) {
+  margin-top: 3rem !important;
+}
+@media screen and (max-width: 875px) {
+  h3:nth-child(2) {
+    margin: 0 !important;
+  }
+}
 
 .parallax {
   background: url("images/backgrounds/bg2.jpg");
@@ -257,12 +265,6 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1200px;
-  margin: 4rem 0;
-}
-@media screen and (max-width: 1216px) {
-  .main__container {
-    margin: 4rem 1rem 2rem;
-  }
 }
 @media screen and (max-width: 875px) {
   .main__container:first-child, .main__container:nth-child(2) {
@@ -279,12 +281,28 @@ h3 {
     align-self: center;
   }
 }
+.main__container:first-child {
+  margin-top: 4rem;
+}
+.main__container:first-child .main__section {
+  width: 50%;
+}
+@media screen and (max-width: 875px) {
+  .main__container:first-child .main__section {
+    width: 100%;
+  }
+}
 .main__container:first-child p {
   font-size: 1.3rem;
   font-weight: 400;
 }
 .main__container:first-child img {
   width: 75%;
+}
+@media screen and (max-width: 1216px) {
+  .main__container:first-child {
+    margin: 4rem 1rem 2rem;
+  }
 }
 .main__container:nth-child(2) {
   justify-content: center;
@@ -299,6 +317,7 @@ h3 {
 }
 .main__container:nth-child(2) .main__section img {
   width: 75%;
+  margin: 1rem;
 }
 @media screen and (max-width: 875px) {
   .main__container:nth-child(2) .main__section img {
@@ -342,7 +361,7 @@ h3 {
   display: flex;
   flex-direction: row !important;
   justify-content: space-around;
-  margin-top: 0;
+  margin-top: 2rem !important;
 }
 .advantages .main__section {
   flex-direction: column !important;
@@ -363,6 +382,11 @@ h3 {
 .advantages .main__section span {
   color: #999999;
   font-size: 0.95rem;
+}
+@media screen and (max-width: 875px) {
+  .advantages {
+    margin: 1rem !important;
+  }
 }
 
 .lvl {
@@ -443,7 +467,7 @@ h3 {
 .lvl__section {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 .lvl__section p {
   display: flex;
@@ -482,6 +506,9 @@ h3 {
   background-color: #1F2029;
   animation-duration: 0.5s;
   color: white;
+}
+.lvl__section:first-child {
+  padding: 0;
 }
 .lvl__section table {
   border-spacing: 0;

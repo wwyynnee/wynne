@@ -574,6 +574,9 @@ h3:nth-child(2) {
     margin: 0;
   }
 }
+.lvl .column div p {
+  flex-direction: column;
+}
 .lvl__section {
   display: flex;
   flex-direction: column;
@@ -584,7 +587,6 @@ h3:nth-child(2) {
   color: black;
   font-size: 1.1rem;
   margin: 0.5rem 0;
-  flex-direction: column;
 }
 .lvl__section p a {
   color: #20bdff !important;

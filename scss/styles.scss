@@ -531,7 +531,14 @@ h3 {
       margin: 0;
     }
   }
-  
+
+  .column {
+    div {
+      p {
+        flex-direction: column;
+      }
+    }
+  }
   &__section {
     display: flex;
     flex-direction: column;
@@ -541,7 +548,6 @@ h3 {
       color: black;
       font-size: 1.1rem;
       margin: 0.5rem 0;
-      flex-direction: column;
       a {
         color: #20bdff !important;
         &:hover {

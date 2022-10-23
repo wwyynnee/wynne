@@ -237,13 +237,18 @@ h3 {
   }
   // Кнопка
   &__btn {
+    display: flex;
+    justify-content: center;
     font-size: 1.1rem;
-    min-width: 300px;
+    width: 300px;
     margin: 1rem;
     button {
       @include button;
-      min-width: 300px;
+      width: 300px;
       padding: 1rem;
+      @media screen and (max-width: 320px) {
+        width: 90%;
+      }
     }
   }
   h1 {
@@ -266,6 +271,9 @@ h3 {
   &__items {
     @media screen and (max-width: 875px) {
       @include center;
+    }
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
     }
   }
   &__container {
@@ -304,9 +312,16 @@ h3 {
       }
       img {
         width: 75%;
+        @media screen and (max-width: 415px) {
+          width: 90%;
+        }
       }
       @media screen and (max-width: 1216px) {
         margin: 4rem 1rem 2rem;
+      }
+      @media screen and (max-width: 650px) {
+        margin: 4rem 1rem 0;
+        padding: 0 1.5rem;
       }
     }
     
@@ -322,9 +337,12 @@ h3 {
         margin: 0 1rem;
         img {
           width: 75%;
-          margin: 1rem;
+          margin: 1rem 0;
           @media screen and (max-width: 875px) {
             width: 60%;
+          }
+          @media screen and (max-width: 415px) {
+            width: 75%;
           }
         }
         p {
@@ -345,6 +363,12 @@ h3 {
         @media screen and (max-width: 875px) {
           width: 100%;
         }
+        @media screen and (max-width: 650px) {
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        flex-direction: column-reverse;
       }
     }
 
@@ -367,26 +391,42 @@ h3 {
   flex-direction: row !important;
   justify-content: space-around;
   margin-top: 2rem !important;
-  .main__section {
-    flex-direction: column !important;
-    align-items: center;
-    text-align: center;
-    width: calc(25% - 2rem) !important;
-    
-    // Иконки
-    img {
-      width: 5rem !important;
-      margin: 1rem 0;
-      filter: brightness(1.1);
+  .main__sections {
+    display: flex;
+    width: 50%;
+    .main__section {
+      align-items: center;
+      text-align: center;
+      
+      // Иконки
+      img {
+        width: 5rem !important;
+        margin: 1rem 0;
+        filter: brightness(1.1);
+      }
+      p {
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin: 0 0 1rem;
+      }
+      span {
+        color: $text-color;
+        font-size: .95rem;
+      }
+      @media screen and (max-width: 650px) {
+        flex-direction: column !important;
+        align-items: center;
+      }
+      @media screen and (max-width: 415px) {
+        width: calc(100% - 1rem) !important;
+      }
     }
-    p {
-      font-weight: 400;
-      font-size: 1.2rem;
-      margin: 0 0 1rem;
+    @media screen and (max-width: 650px) {
+      justify-content: center;
+      width: 100%;
     }
-    span {
-      color: $text-color;
-      font-size: .95rem;
+    @media screen and (max-width: 415px) {
+      flex-direction: column;
     }
   }
   @media screen and (max-width: 875px) {
@@ -417,12 +457,10 @@ h3 {
         width: 100%;
       }
     }
-    @media screen and (max-width: 875px) {
-      flex-direction: column;
-    }
     p:first-child {
       @media screen and (max-width: 875px) {
         align-self: flex-start;
+        color: $main-color;
       }
     }
   }
@@ -432,6 +470,9 @@ h3 {
       width: 25%;
       @media screen and (max-width: 875px) {
         width: 20%;
+      }
+      @media screen and (max-width: 550px) {
+        margin: 0 0.5rem;
       }
     }
     @media screen and (max-width: 875px) {
@@ -450,13 +491,44 @@ h3 {
       margin: 1rem;
       height: 6rem;
       width: 6rem;
+      @media screen and (max-width: 500px) {
+        height: 5rem;
+        width: 5rem;
+      }
+      @media screen and (max-width: 415px) {
+        height: 4rem;
+        width: 4rem;
+      }
+      @media screen and (max-width: 320px) {
+        height: 3.5rem;
+        width: 3.5rem;
+      }
+      @media screen and (max-width: 320px) {
+        margin: 0 0.5rem;
+        height: 3.25rem;
+        width: 3.25rem;
+      }
     }
     p {
+      text-align: center;
       font-size: 1.2rem;
       width: auto;
+      @media screen and (max-width: 415px) {
+        font-size: .9rem !important;
+      }
+      @media screen and (max-width: 350px) {
+        font-size: .8rem !important;
+        margin: 0 !important;
+      }
     }
     @media screen and (max-width: 1216px) {
       flex-direction: column;
+    }
+    @media screen and (max-width: 350px) {
+      margin: 0 1rem;
+    }
+    @media screen and (max-width: 320px) {
+      margin: 0;
     }
   }
   
@@ -466,11 +538,10 @@ h3 {
     padding-bottom: 1rem;
     p {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       color: black;
       font-size: 1.1rem;
-      margin: .5rem 0;
+      margin: 0.5rem 0;
+      flex-direction: column;
       a {
         color: #20bdff !important;
         &:hover {
@@ -556,9 +627,29 @@ h3 {
     .details {
       summary {
         display: flex;
+        p {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          span {
+            @media screen and (max-width: 441px) {
+              margin: .5rem 0;
+            }
+          }
+          @media screen and (max-width: 441px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            color: $main-color;
+          }
+        }
       }
       p:nth-child(2) {
         margin: 0 0 0 5.125rem;
+        @media screen and (max-width: 441px) {
+          margin: 0;
+        }
       }
     }
     
@@ -579,13 +670,21 @@ h3 {
     // Гарантия
     &:nth-child(2) {
       p {
-        margin: auto 1.5rem;
+        @media screen and (max-width: 814px) {
+          display: inline;
+        }
+        @media screen and (max-width: 814px) {
+          font-size: 1rem;
+        }
       }
       span {
         margin-left: .25rem;
         color: $main-color;
         &:last-child {
           margin-right: .25rem;
+        }
+        @media screen and (max-width: 814px) {
+          margin-left: auto;
         }
       }
     }
@@ -597,20 +696,54 @@ h3 {
   }
 
   // Последние работы
+  .fix_h3 {
+    @media screen and (max-width: 415px) {
+      margin: 1rem !important;
+    }
+  }
   &__row {
     display: flex;
     align-items: baseline;
     .lvl__section {
       margin: 0 .5rem;
       p {
+        display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         text-align: center;
         margin: auto;
+        @media screen and (max-width: 814px) {
+          line-height: 2;
+        }
+        @media screen and (max-width: 550px) {
+          line-height: 1.5;
+          margin: .5rem 0;
+        }
       }
       img {
         @media screen and (max-width: 814px) {
+          width: 65%;
+        }
+        @media screen and (max-width: 550px) {
+          width: 70%;
+        }
+        @media screen and (max-width: 500px) {
           width: 75%;
+        }
+        @media screen and (max-width: 415px) {
+          width: 80%;
+        }
+        @media screen and (max-width: 400px) {
+          width: 85%;
+        }
+        @media screen and (max-width: 350px) {
+          width: 90%;
+        }
+        @media screen and (max-width: 320px) {
+          width: 95%;
+        }
+        @media screen and (max-width: 300px) {
+          width: 100%;
         }
       }
       @media screen and (max-width: 814px) {
@@ -626,14 +759,20 @@ h3 {
     font-size: 1.5rem;
     margin: 0 1rem;
     color: $main-color;
+    @media screen and (max-width: 441px) {
+      display: none;
+    }
   } 
   &__text {
     font-size: 1.1rem;
     color: $main-color;
+    @media screen and (max-width: 441px) {
+      font-size: 1.2rem;
+    }
   }
 }
 
-// Нижний блок
+// Нижний блок (Контакты)
 .footer {
   background: url("images/backgrounds/bg.jpg");
   background-repeat: no-repeat;
@@ -656,6 +795,21 @@ h3 {
       margin: 1rem;
     }
   }
+  // Основной блок
+  &__items {
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      .footer__containers {
+        div {
+          display: block;
+          margin: 1rem 1.5rem 0;
+        }
+      }
+      .footer__container {
+        @include center;
+      }
+    }
+  }
   &__items, &__containers {
     display: flex;
     @media screen and (max-width: 814px) {
@@ -669,6 +823,9 @@ h3 {
       font-weight: 500;
       color: $nav-color;
       line-height: 1.25;
+      @media screen and (max-width: 300px) {
+        font-size: 1rem;
+      }
     }
     ul {
       list-style: none;
@@ -676,6 +833,9 @@ h3 {
         &:hover {
           text-decoration: underline;
         }
+      }
+      @media screen and (max-width: 300px) {
+        font-size: .9rem;
       }
     }
     // Кнопки
@@ -712,6 +872,10 @@ h3 {
       width: calc(100% - 50px - 2rem);
       padding: 0 2rem;
     }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      margin: 1rem .5rem 0 !important;
+    }
   }
   &__contacts {
     display: flex;
@@ -731,6 +895,10 @@ h3 {
           filter: invert(0);
         }
       }
+    }
+    @media screen and (max-width: 650px) {
+      flex-direction: row-reverse;
+      justify-content: center;
     }
   }
 }

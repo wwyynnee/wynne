@@ -20,6 +20,9 @@ $text-color: #999999;
 // Панель прокрутки
 ::-webkit-scrollbar {
   width: 5px;
+  @media screen and (max-width: 814px) {
+    overflow-y: visible;
+  }
 }
 ::-webkit-scrollbar-thumb {
   background-color: $main-color;
@@ -46,6 +49,9 @@ $text-color: #999999;
   background-size: cover;
   height: 100%;
   width: 100%;
+  @media screen and (max-width: 441px) {
+    background-attachment: scroll;
+  }
 }
 // Градиент для текста
 @mixin gradient {
@@ -78,6 +84,10 @@ $text-color: #999999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 441px) {
+    background-attachment: scroll;
+    height: 50%;
+  }
 }
 
 // Структура
@@ -105,6 +115,11 @@ html, body {
 // Основные элементы
 button {
   cursor: pointer;
+}
+h1, h2, h3 {
+  @media screen and (max-width: 400px) {
+    text-align: center;
+  }
 }
 h1, h2 {
   color: white;
@@ -323,6 +338,9 @@ h3 {
         margin: 4rem 1rem 0;
         padding: 0 1.5rem;
       }
+      @media screen and (max-width: 650px) {
+        padding: 0 1rem;
+      }
     }
     
     // Второй блок - Продолжение обо мне
@@ -369,6 +387,9 @@ h3 {
       }
       @media screen and (max-width: 650px) {
         flex-direction: column-reverse;
+      }
+      @media screen and (max-width: 650px) {
+        padding: 0 1rem;
       }
     }
 
@@ -559,6 +580,9 @@ h3 {
       border-radius: 4px;
       margin-top: 1rem;
     }
+    .text-fixed {
+      display: inline !important;
+    }
     .linkbutton {
       display: flex;
       justify-content: center;
@@ -582,7 +606,8 @@ h3 {
     &:first-child {
       padding: 0;
     }
-    
+
+    // Прайс
     table {
       border-spacing: 0;
       color: black;
@@ -605,6 +630,9 @@ h3 {
             margin: 0 .35rem;
             display: none;
           }
+          @media screen and (max-width: 400px) {
+            justify-content: center;
+          }
         }
       }
       &, th, td {
@@ -616,11 +644,22 @@ h3 {
       th {
         font-weight: 400;
         padding: .75rem 0;
+        &:nth-child(2) {
+          @media screen and (max-width: 441px) {
+            display: none;
+          }
+        }
       }
       td {
         &:nth-child(2) {
           font-style: italic;
+          @media screen and (max-width: 441px) {
+            display: none;
+          }
         }
+      }
+      .show {
+        display: block !important;
       }
       .td {
         td {
@@ -684,14 +723,7 @@ h3 {
         }
       }
       span {
-        margin-left: .25rem;
         color: $main-color;
-        &:last-child {
-          margin-right: .25rem;
-        }
-        @media screen and (max-width: 814px) {
-          margin-left: auto;
-        }
       }
     }
     div {

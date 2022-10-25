@@ -9,6 +9,12 @@
 ::-webkit-scrollbar {
   width: 5px;
 }
+@media screen and (max-width: 814px) {
+  ::-webkit-scrollbar {
+    overflow-y: scroll;
+    width: 0;
+  }
+}
 
 ::-webkit-scrollbar-thumb {
   background-color: #5433ff;
@@ -38,6 +44,12 @@ html, body {
 
 button {
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  h1, h2, h3 {
+    text-align: center;
+  }
 }
 
 h1, h2 {
@@ -81,6 +93,12 @@ h3:nth-child(2) {
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 441px) {
+  .parallax {
+    background-attachment: scroll;
+    height: 50%;
+  }
+}
 
 .parallax2 {
   background: url("images/backgrounds/bg3.jpg");
@@ -92,6 +110,12 @@ h3:nth-child(2) {
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 441px) {
+  .parallax2 {
+    background-attachment: scroll;
+    height: 50%;
+  }
+}
 
 .parallax3 {
   background: url("images/backgrounds/bg4.jpg");
@@ -102,6 +126,12 @@ h3:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-width: 441px) {
+  .parallax3 {
+    background-attachment: scroll;
+    height: 50%;
+  }
 }
 
 .line {
@@ -202,6 +232,11 @@ h3:nth-child(2) {
   width: 100%;
   flex-direction: column;
   padding-bottom: 4rem;
+}
+@media screen and (max-width: 441px) {
+  .container {
+    background-attachment: scroll;
+  }
 }
 .container__item {
   display: flex;
@@ -327,6 +362,11 @@ h3:nth-child(2) {
     padding: 0 1.5rem;
   }
 }
+@media screen and (max-width: 650px) {
+  .main__container:first-child {
+    padding: 0 1rem;
+  }
+}
 .main__container:nth-child(2) {
   justify-content: center;
   align-items: center;
@@ -382,6 +422,11 @@ h3:nth-child(2) {
 @media screen and (max-width: 650px) {
   .main__container:nth-child(2) {
     flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main__container:nth-child(2) {
+    padding: 0 1rem;
   }
 }
 @media screen and (max-width: 920px) {
@@ -598,6 +643,9 @@ h3:nth-child(2) {
   border-radius: 4px;
   margin-top: 1rem;
 }
+.lvl__section .text-fixed {
+  display: inline !important;
+}
 .lvl__section .linkbutton {
   display: flex;
   justify-content: center;
@@ -644,6 +692,11 @@ h3:nth-child(2) {
   margin: 0 0.35rem;
   display: none;
 }
+@media screen and (max-width: 400px) {
+  .lvl__section table caption .caption {
+    justify-content: center;
+  }
+}
 .lvl__section table, .lvl__section table th, .lvl__section table td {
   border: solid 1px #1F2029;
 }
@@ -654,8 +707,21 @@ h3:nth-child(2) {
   font-weight: 400;
   padding: 0.75rem 0;
 }
+@media screen and (max-width: 441px) {
+  .lvl__section table th:nth-child(2) {
+    display: none;
+  }
+}
 .lvl__section table td:nth-child(2) {
   font-style: italic;
+}
+@media screen and (max-width: 441px) {
+  .lvl__section table td:nth-child(2) {
+    display: none;
+  }
+}
+.lvl__section table .show {
+  display: block !important;
 }
 .lvl__section table .td td {
   padding: 0.75rem;
@@ -712,16 +778,7 @@ h3:nth-child(2) {
   }
 }
 .lvl__section:nth-child(2) span {
-  margin-left: 0.25rem;
   color: #5433ff;
-}
-.lvl__section:nth-child(2) span:last-child {
-  margin-right: 0.25rem;
-}
-@media screen and (max-width: 814px) {
-  .lvl__section:nth-child(2) span {
-    margin-left: auto;
-  }
 }
 .lvl__section div {
   display: flex;

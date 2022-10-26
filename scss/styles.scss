@@ -21,7 +21,8 @@ $text-color: #999999;
 ::-webkit-scrollbar {
   width: 5px;
   @media screen and (max-width: 814px) {
-    overflow-y: visible;
+    overflow-y: scroll;
+    width: 0;
   }
 }
 ::-webkit-scrollbar-thumb {
@@ -172,11 +173,12 @@ h3 {
 .nav {
   justify-content: space-between;
   background-color: $nav-color;
-  position: absolute;
+  position: fixed;
   display: flex;
   height: 4rem;
   width: 100%;
   z-index: 1;
+  top: 0;
   &__content {
     display: flex;
     align-items: center;
@@ -815,6 +817,8 @@ h3 {
   background: url("images/backgrounds/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  bottom: 0;
   &__content {
     display: flex;
     justify-content: center;

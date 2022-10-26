@@ -145,11 +145,12 @@ h3:nth-child(2) {
 .nav {
   justify-content: space-between;
   background-color: #1F2029;
-  position: absolute;
+  position: fixed;
   display: flex;
   height: 4rem;
   width: 100%;
   z-index: 1;
+  top: 0;
 }
 .nav__content {
   display: flex;
@@ -890,6 +891,8 @@ h3:nth-child(2) {
   background: url("images/backgrounds/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  bottom: 0;
 }
 .footer__content {
   display: flex;

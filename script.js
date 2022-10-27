@@ -71,3 +71,16 @@ $(".nav__container").on("click", () => {
 $("#up").click(() => {
   $("html, body").animate({ scrollTop: 0}, 800);
 });
+
+// Меню
+$(".menu").hide();
+$("*").on("click", (e) => {
+  if ($(e.target).is(".nav__content")) {
+    return false;
+  }
+
+  $(".menu").hide();
+})
+const menu = () => {
+  $(".menu").toggle();
+}

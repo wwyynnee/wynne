@@ -190,7 +190,7 @@ h3 {
       }
     }
     &:nth-child(3) {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       border-radius: 50px !important;
@@ -200,6 +200,9 @@ h3 {
       width: 50px;
       &:hover {
         @include boxHover;
+      }
+      @media screen and (max-width: 992px) {
+        display: flex;
       }
     }
     ul {
@@ -239,8 +242,9 @@ h3 {
 
 // Главный блок
 .container {
-  @include center;
   @include bg;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   padding-bottom: 4rem;
   &__item {
@@ -273,6 +277,31 @@ h3 {
   }
   h2 {
     margin: .5rem 1rem;
+  }
+}
+
+// Центр
+.center {
+  @include center;
+  flex-direction: column;
+  height: 100%;
+}
+
+// Меню
+.menu {
+  width: 100%;
+  margin: 2rem;
+  ul {
+    list-style: none;
+    li {
+      border-radius: 4px;
+      padding: 0.5rem;
+      margin: 0 1rem;
+      &:hover {
+        @include boxHover;
+        color: white;
+      }
+    }
   }
 }
 

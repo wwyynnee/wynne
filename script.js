@@ -75,7 +75,7 @@ $("#up").click(() => {
 // Меню
 $(".menu").hide();
 $("*").on("click", (e) => {
-  if ($(e.target).is(".nav__content")) {
+  if ($(e.target).is(".menu, .menu ul, .menu svg, .menu svg path, .nav__content")) {
     return false;
   }
 

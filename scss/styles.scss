@@ -289,19 +289,53 @@ h3 {
 
 // Меню
 .menu {
+  @include center;
+  position: fixed;
+  height: 100vh;
   width: 100%;
-  margin: 2rem;
+  background-color: $color;
+  z-index: 2;
+  flex-direction: column;
+  top: 0;
+  p {
+    @include center;
+    height: 50px;
+    width: 50px;
+    padding: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    z-index: 3;
+  }
   ul {
+    @include center;
+    height: 80%;
+    position: absolute;
+    top: 0;
     list-style: none;
+    font-size: 1.1rem;
+    width: 100%;
+    flex-direction: column;
     li {
-      border-radius: 4px;
-      padding: 0.5rem;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
       margin: 0 1rem;
+      width: calc(75vw - 2rem);
       &:hover {
         @include boxHover;
         color: white;
       }
+      @media screen and (max-width: 400px) {
+        width: calc(100vw - 2rem);
+      }
     }
+  }
+  svg {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
   }
 }
 

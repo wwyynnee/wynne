@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#1F2029">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="images/logo/icon.png" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -40,7 +41,7 @@
             </a>
             <a href="#price" class="nav__elements price">
               <li class="nav__container">Прайс</li>
-            </a> 
+            </a>
             <a href="#contacts" class="nav__elements contacts">
               <li class="nav__container">Контакты</li>
             </a>
@@ -49,35 +50,40 @@
         <div class="nav__content" onclick="menu()">⋮</div>
       </div>
     </nav>
+    <div class="menu">
+      <p>⨉</p>
+      <ul>
+        <a href="#about">
+          <li>Обо мне</li>
+        </a>
+        <a href="error">
+          <li>Блог</li>
+        </a>
+        <a href="#portfolio">
+          <li>Портфолио</li>
+        </a>
+        <a href="#price">
+          <li>Прайс</li>
+        </a>
+        <a href="#contacts">
+          <li>Контакты</li>
+        </a>
+      </ul>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 2.5" class="line">
+        <path d="M0 0Q1 2 3 2C5 2 6 3 8 2 9 2 11 3 12 2Q13 1 17 2T22 2C23 1 25 2 25 0L25 0" fill="white" />
+        </path>
+      </svg>
+    </div>
     <div class="wrapper__content">
       <div class="container">
-        <div class="menu">
-          <ul>
-            <a href="#about">
-              <li>Обо мне</li>
-            </a>
-            <a href="error">
-              <li>Блог</li>
-            </a>
-            <a href="#portfolio">
-              <li>Портфолио</li>
-            </a>
-            <a href="#price">
-              <li>Прайс</li>
-            </a>
-            <a href="#contacts">
-              <li>Контакты</li>
-            </a>
-          </ul>
-        </div>
         <div class="center">
           <div class="container__item">
-          <h1>Wynne</h1>
-          <h2>Веб-программист &bull; Веб-дизайнер &bull; Fullstack-разработчик</h2>
-        </div>
+            <h1>Wynne</h1>
+            <h2>Веб-программист &bull; Веб-дизайнер &bull; Fullstack-разработчик</h2>
+          </div>
           <div class="container__btn">
-          <button>Заказать сайт</button>
-        </div>
+            <button>Заказать сайт</button>
+          </div>
         </div>
       </div>
       <div class="main" id="about">
@@ -87,7 +93,8 @@
               <div class="main__section">
                 <h3>Обо мне</h3>
                 <p>Я занимаюсь разработкой и созданием веб-сайтов более 3-х лет. Владею HTML, CSS, JavaScript, PHP на
-                  продвинутом уровне. Я помогаю воплощать Ваши идеи и дизайны в веб-жизнь.<br />Со мной удобно работать и
+                  продвинутом уровне. Я помогаю воплощать Ваши идеи и дизайны в веб-жизнь.<br />Со мной удобно работать
+                  и
                   мне важно, чтобы клиент остался доволен! Моя цель ― предоставить лучшую услугу на рынке!</p>
               </div>
               <div class="main__section">
@@ -154,32 +161,45 @@
               <h3>Этапы работы</h3>
               <div class="details">
                 <details open>
-                  <summary><p><span>1</span>Составление технического задания</p></summary>
+                  <summary>
+                    <p><span>1</span>Составление технического задания</p>
+                  </summary>
                   <p>На этом этапе я отправляю бриф, обсуждаем задачи, цели и сроки</p>
                 </details>
               </div>
               <div class="details">
                 <details open>
-                  <summary><p><span>2</span>Разработка макета, дизайна проекта</p></summary>
-                  <p>Разрабатываю самостоятельно макет или дам консультации по готовому макету, а ещё анализирую конкурентов</p>
+                  <summary>
+                    <p><span>2</span>Разработка макета, дизайна проекта</p>
+                  </summary>
+                  <p>Разрабатываю самостоятельно макет или дам консультации по готовому макету, а ещё анализирую
+                    конкурентов</p>
                 </details>
               </div>
               <div class="details">
                 <details open>
-                  <summary><p><span>3</span>Создание сайта на основе макета</p></summary>
-                  <p>Подбираю подходящие технологии и создаю полноценный сайт, также оптимизирую его и адаптирую под устройства</p>
+                  <summary>
+                    <p><span>3</span>Создание сайта на основе макета</p>
+                  </summary>
+                  <p>Подбираю подходящие технологии и создаю полноценный сайт, также оптимизирую его и адаптирую под
+                    устройства</p>
                 </details>
               </div>
               <div class="details">
                 <details open>
-                  <summary><p><span>4</span>Показ проекта</p></summary>
+                  <summary>
+                    <p><span>4</span>Показ проекта</p>
+                  </summary>
                   <p>На этом этапе снимаю видео и показываю скриншоты выполненного проекта</p>
                 </details>
               </div>
               <div class="details">
                 <details open>
-                  <summary><p><span>5</span>Завершение проекта и оплата работы</p></summary>
-                  <p>После одобрения оплачиваете работу, а я отправляю ссылку на сайт, файлы проекта и предоставляю доступ к хостингу. По необходимости подключу домен, настрою аналитику и рекламу</p>
+                  <summary>
+                    <p><span>5</span>Завершение проекта и оплата работы</p>
+                  </summary>
+                  <p>После одобрения оплачиваете работу, а я отправляю ссылку на сайт, файлы проекта и предоставляю
+                    доступ к хостингу. По необходимости подключу домен, настрою аналитику и рекламу</p>
                 </details>
               </div>
             </div>
@@ -301,7 +321,9 @@
             </div>
             <div class="lvl__section">
               <h3>Интеграция кода в CMS</h3>
-              <p class="text-fixed">Мой код легко интегрируется в любую систему управления контентом: <span>WordPress</span>, <span>Joomla</span>, <span>Bitrix</span>, <span>PrestaShop</span>, <span>OpenCart</span> и так далее</p>
+              <p class="text-fixed">Мой код легко интегрируется в любую систему управления контентом:
+                <span>WordPress</span>, <span>Joomla</span>, <span>Bitrix</span>, <span>PrestaShop</span>,
+                <span>OpenCart</span> и так далее</p>
             </div>
           </div>
         </div>
@@ -324,15 +346,18 @@
             </div>
             <div class="lvl__row">
               <div class="lvl__section">
-                <p><a href="https://projector.ml" target="_blank">Projector.ml</a>Сайт-лендинг по продаже проектора — домашнего кинотеатра</p>
+                <p><a href="https://projector.ml" target="_blank">Projector.ml</a>Сайт-лендинг по продаже проектора —
+                  домашнего кинотеатра</p>
                 <img src="images/works/projector.png" alt />
               </div>
               <div class="lvl__section">
-                <p><a href="https://darkland.tk" target="_blank">Darkland.tk</a>Сайт-лендинг для начинающего Discord-сервера</p>
+                <p><a href="https://darkland.tk" target="_blank">Darkland.tk</a>Сайт-лендинг для начинающего
+                  Discord-сервера</p>
                 <img src="images/works/darkland.png" alt />
               </div>
               <div class="lvl__section">
-                <p><a href="https://worldplay.tk" target="_blank">Worldplay.tk</a>Многостраничный портал с браузерными играми</p>
+                <p><a href="https://worldplay.tk" target="_blank">Worldplay.tk</a>Многостраничный портал с браузерными
+                  играми</p>
                 <img src="images/works/worldplay.png" alt />
               </div>
             </div>
@@ -360,22 +385,26 @@
                 </tr>
                 <tr>
                   <td>Создание сайтов</td>
-                  <td>Построение любых веб-сайтов с красивым дизайном: от одностраничных (лендингов) до корпоративных порталов и интернет-магазинов</td>
+                  <td>Построение любых веб-сайтов с красивым дизайном: от одностраничных (лендингов) до корпоративных
+                    порталов и интернет-магазинов</td>
                   <td>от 500 ₽</td>
                 </tr>
                 <tr>
                   <td>Специальная настройка сайта</td>
-                  <td>Устранение неполадок, постановка проекта на хостинг, присоединение домена, установка контекстной рекламы и т.п</td>
+                  <td>Устранение неполадок, постановка проекта на хостинг, присоединение домена, установка контекстной
+                    рекламы и т.п</td>
                   <td>от 250 ₽</td>
                 </tr>
                 <tr>
                   <td>Профессиональное улучшение сайта</td>
-                  <td>Корректное отображение портала на разных устройствах и функционирование в браузерах, быстрая загрузка страниц, продвижение в поисковых системах и т.д</td>
+                  <td>Корректное отображение портала на разных устройствах и функционирование в браузерах, быстрая
+                    загрузка страниц, продвижение в поисковых системах и т.д</td>
                   <td>от 750 ₽</td>
                 </tr>
                 <tr>
                   <td>Грамотное наполнение сайта</td>
-                  <td>Разработка и модификация отдельных страниц сайта, наполнение текстовым и мультимедийным контентом</td>
+                  <td>Разработка и модификация отдельных страниц сайта, наполнение текстовым и мультимедийным контентом
+                  </td>
                   <td>от 350 ₽</td>
                 </tr>
               </table>
@@ -442,7 +471,8 @@
                 </tr>
                 <tr>
                   <td>Создание логотипа, баннеров, открыток и флаеров, плакатов и т.п</td>
-                  <td rowspan="3">Создание любых картинок с красивым дизайном: от логотипа до иллюстрации и брендбука</td>
+                  <td rowspan="3">Создание любых картинок с красивым дизайном: от логотипа до иллюстрации и брендбука
+                  </td>
                   <td>от 500 ₽</td>
                 </tr>
                 <tr class="td">
@@ -501,29 +531,55 @@
                 <div class="footer__container">
                   <p>Навигация</p>
                   <ul>
-                    <a href="#about"><li>Обо мне</li></a>
-                    <a href="error"><li>Блог</li></a>
-                    <a href="#portfolio"><li>Портфолио</li></a>
-                    <a href="#price"><li>Прайс</li></a>
-                    <a href="#contacts"><li>Контакты</li></a>
+                    <a href="#about">
+                      <li>Обо мне</li>
+                    </a>
+                    <a href="error">
+                      <li>Блог</li>
+                    </a>
+                    <a href="#portfolio">
+                      <li>Портфолио</li>
+                    </a>
+                    <a href="#price">
+                      <li>Прайс</li>
+                    </a>
+                    <a href="#contacts">
+                      <li>Контакты</li>
+                    </a>
                   </ul>
                 </div>
                 <div class="footer__container">
                   <p>Полезные<br />ссылки</p>
                   <ul>
-                    <a href="https://github.com/wwyynnee" target="_blank"><li>GitHub</li></a>
-                    <a href="https://www.sololearn.com/profile/18925696" target="_blank"><li>Sololearn</li></a>
-                    <a href="https://replit.com/@wwyynnee" target="_blank"><li>Replit</li></a>
-                    <a href="https://glitch.com/@wynne" target="_blank"><li>Glitch</li></a>
+                    <a href="https://github.com/wwyynnee" target="_blank">
+                      <li>GitHub</li>
+                    </a>
+                    <a href="https://www.sololearn.com/profile/18925696" target="_blank">
+                      <li>Sololearn</li>
+                    </a>
+                    <a href="https://replit.com/@wwyynnee" target="_blank">
+                      <li>Replit</li>
+                    </a>
+                    <a href="https://glitch.com/@wynne" target="_blank">
+                      <li>Glitch</li>
+                    </a>
                   </ul>
                 </div>
                 <div class="footer__container">
                   <p>Услуги и<br />фриланс</p>
                   <ul>
-                    <a href="https://www.avito.ru/user/c4c170242bbaf8c8ff0a3192022e1bb4/profile" target="_blank"><li>Avito</li></a>
-                    <a href="https://youla.ru/user/60071fc87435a569b04d7de1" target="_blank"><li>Юла</li></a>
-                    <a href="https://workspace.ru/id/aleksey-seryy/" target="_blank"><li>Workspace</li></a>
-                    <a href="https://freelance.habr.com/freelancers/value" target="_blank"><li>Хабр Фриланс</li></a>
+                    <a href="https://www.avito.ru/user/c4c170242bbaf8c8ff0a3192022e1bb4/profile" target="_blank">
+                      <li>Avito</li>
+                    </a>
+                    <a href="https://youla.ru/user/60071fc87435a569b04d7de1" target="_blank">
+                      <li>Юла</li>
+                    </a>
+                    <a href="https://workspace.ru/id/aleksey-seryy/" target="_blank">
+                      <li>Workspace</li>
+                    </a>
+                    <a href="https://freelance.habr.com/freelancers/value" target="_blank">
+                      <li>Хабр Фриланс</li>
+                    </a>
                   </ul>
                 </div>
               </div>
@@ -532,5 +588,6 @@
         </div>
       </footer>
     </div>
-  </body>
+</body>
+
 </html>

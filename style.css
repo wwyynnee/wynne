@@ -34,6 +34,30 @@ html, body {
   justify-content: center;
 }
 
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: #1F2029;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+}
+.preloader__item p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.loaded .preloader {
+  display: none;
+}
+.loaded__hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
 .wrapper, .wrapper__content {
   height: 100%;
   width: 100%;
@@ -92,12 +116,10 @@ h3:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-@media screen and (max-width: 441px) {
-  .parallax {
+  /*@media screen and (max-width: 441px) {
     background-attachment: scroll;
     height: 50%;
-  }
+  }*/
 }
 
 .parallax2 {
@@ -109,12 +131,10 @@ h3:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-@media screen and (max-width: 441px) {
-  .parallax2 {
+  /*@media screen and (max-width: 441px) {
     background-attachment: scroll;
     height: 50%;
-  }
+  }*/
 }
 
 .parallax3 {
@@ -126,12 +146,10 @@ h3:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-@media screen and (max-width: 441px) {
-  .parallax3 {
+  /*@media screen and (max-width: 441px) {
     background-attachment: scroll;
     height: 50%;
-  }
+  }*/
 }
 
 .line {

@@ -85,10 +85,10 @@ $text-color: #999999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media screen and (max-width: 441px) {
+  /*@media screen and (max-width: 441px) {
     background-attachment: scroll;
     height: 50%;
-  }
+  }*/
 }
 
 // Структура
@@ -103,6 +103,34 @@ html, body {
   width: 100%;
   @include center;
 }
+
+// Загрузка
+.preloader {
+  @include center;
+  position: fixed;
+  background: $color;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  &__item {
+    p {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 1rem;
+    }
+  }
+}
+.loaded {
+  & .preloader {
+    display: none;
+  }
+  &__hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+}
+
+// Структура
 .wrapper {
   &, &__content {
     height: 100%;

@@ -17,6 +17,12 @@
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="preloader__item">
+      <img src="images/logo/icon.png" alt />
+      <p>Загрузка...</p>
+    </div>
+  </div>
   <div class="wrapper">
     <nav>
       <div class="nav">
@@ -588,6 +594,15 @@
         </div>
       </footer>
     </div>
+  <script>
+    window.onload = () => {
+      document.body.classList.add("loaded__hiding");
+      window.setTimeout(() => {
+        document.body.classList.add("loaded");
+        document.body.classList.remove("loaded__hiding");
+      }, 500);
+    }
+  </script>
 </body>
 
 </html>

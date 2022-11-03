@@ -71,8 +71,8 @@ html, body {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
   width: 100%;
   z-index: 9;
 }
@@ -92,10 +92,14 @@ html, body {
   width: calc(100% - 2rem);
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 500px) {
+  .buy__items hr {
+    width: 100%;
+  }
+}
 .buy__items form {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
 }
 .buy__items form input, .buy__items form textarea {
   background-color: #1F2029;
@@ -107,6 +111,22 @@ html, body {
   resize: none;
   color: #fff;
 }
+.buy__items form input[type=submit] {
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .buy__items form {
+    width: calc(100% + 2rem);
+  }
+}
+@media screen and (max-width: 500px) {
+  .buy__items {
+    border-radius: 0;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+  }
+}
 .buy__title {
   width: 100%;
   padding: 0 1rem;
@@ -117,6 +137,11 @@ html, body {
   font-size: 1.375rem;
   font-weight: 500;
   margin: 1rem 0;
+}
+@media screen and (max-width: 500px) {
+  .buy__title {
+    padding: 0;
+  }
 }
 .buy__close {
   font-size: 2.5rem;

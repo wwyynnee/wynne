@@ -28,7 +28,7 @@
       <div class="buy__items">
         <div class="buy__title">
           <p>Ваш заказ:</p>
-          <div class="buy__close">✕</div>
+          <div class="buy__close" onclick="buyClose()">✕</div>
         </div>
         <hr>
         <form action="https://feedback.wynne.tk/submit" method="get">
@@ -104,7 +104,7 @@
             <h2>Веб-программист &bull; Веб-дизайнер &bull; Fullstack-разработчик</h2>
           </div>
           <div class="container__btn">
-            <button>Заказать сайт</button>
+            <button onclick="buy()">Заказать сайт</button>
           </div>
         </div>
       </div>
@@ -546,7 +546,7 @@
                 </div>
                 <div class="footer__contacts">
                   <button id="up">⇑</button>
-                  <button class="order">Заказать сайт</button>
+                  <button class="order" onclick="buy()">Заказать сайт</button>
                 </div>
               </div>
               <div class="footer__containers">

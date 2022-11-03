@@ -72,6 +72,15 @@ $("#up").click(() => {
   $("html, body").animate({ scrollTop: 0}, 800);
 });
 
+// Окно заказа
+$(".buy").hide();
+const buy = () => {
+  $(".buy").show();
+}
+const buyClose = () => {
+  $(".buy").hide();
+}
+
 // Меню
 $(".menu").hide();
 $("*").on("click", (e) => {

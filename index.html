@@ -24,6 +24,22 @@
     </div>
   </div>
   <div class="wrapper">
+    <div class="buy">
+      <div class="buy__items">
+        <div class="buy__title">
+          <p>Ваш заказ:</p>
+          <div class="buy__close">✕</div>
+        </div>
+        <hr>
+        <form action="https://feedback.wynne.tk/submit" method="get">
+          <input name="subject" size="30" type="text" placeholder="Тема" required />
+          <input name="name" type="text" placeholder="Ваше имя" required />
+          <input name="email" type="email" placeholder="Ваша почта" required />
+          <textarea name="body" cols="32" rows="5" placeholder="Сообщение" minlength="10" maxlength="500" required></textarea>
+          <input type="submit" value="Оформить заказ" />
+        </form>
+      </div>
+    </div>
     <nav>
       <div class="nav">
         <div class="nav__content">

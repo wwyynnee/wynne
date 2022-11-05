@@ -40,8 +40,9 @@ html, body {
   justify-content: center;
   position: fixed;
   background: #1F2029;
+  overflow: hidden;
   height: 100vh;
-  width: 100%;
+  width: 110%;
   z-index: 99;
 }
 .preloader__item p {
@@ -52,6 +53,7 @@ html, body {
 
 .loaded .preloader {
   display: none;
+  overflow-y: scroll;
 }
 .loaded__hiding .preloader {
   transition: 0.3s opacity;
@@ -82,13 +84,14 @@ html, body {
   justify-content: center;
   flex-direction: column;
   border-radius: 20px;
-  background-color: #111111;
+  background-color: white;
   margin: 1rem;
   padding: 2rem;
   width: 30rem;
+  color: black;
 }
 .buy__items hr {
-  border-color: rgba(136, 136, 136, 0.1882352941);
+  border-color: rgba(0, 0, 0, 0.1882352941);
   width: calc(100% - 2rem);
   margin-bottom: 1rem;
 }
@@ -102,17 +105,19 @@ html, body {
   flex-direction: column;
 }
 .buy__items form input, .buy__items form textarea {
-  background-color: #1F2029;
+  background-color: rgba(136, 136, 136, 0.1254901961);
   margin: 0.5rem 1rem;
   padding: 0.8rem 1rem;
   outline: none;
   border: none;
   border-radius: 5px;
   resize: none;
-  color: #fff;
 }
 .buy__items form input[type=submit] {
+  background-color: #111111;
+  font-weight: 400;
   cursor: pointer;
+  color: white;
 }
 @media screen and (max-width: 500px) {
   .buy__items form {

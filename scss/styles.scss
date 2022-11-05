@@ -105,8 +105,9 @@ html, body {
   @include center;
   position: fixed;
   background: $color;
+  overflow: hidden;
   height: 100vh;
-  width: 100%;
+  width: 110%;
   z-index: 99;
   &__item {
     p {
@@ -119,6 +120,7 @@ html, body {
 .loaded {
   & .preloader {
     display: none;
+    overflow-y: scroll;
   }
   &__hiding .preloader {
     transition: 0.3s opacity;
@@ -149,12 +151,13 @@ html, body {
     @include center;
     flex-direction: column;
     border-radius: 20px;
-    background-color: $dark-color;
+    background-color: white;
     margin: 1rem;
     padding: 2rem;
     width: 30rem;
+    color: black;
     hr {
-      border-color: rgba(136, 136, 136, 0.1882352941);
+      border-color: rgba(0, 0, 0, 0.1882352941);
       width: calc(100% - 2rem);
       margin-bottom: 1rem;
       @media screen and (max-width: 500px) {
@@ -165,17 +168,19 @@ html, body {
       display: flex;
       flex-direction: column;
       input, textarea {
-        background-color: $color;
+        background-color: rgba(136, 136, 136, 0.1254901961);;
         margin: .5rem 1rem;
         padding: .8rem 1rem;
         outline: none;
         border: none;
         border-radius: 5px;
         resize: none;
-        color: #fff;
       }
       input[type="submit"] {
+        background-color: $dark-color;
+        font-weight: 400;
         cursor: pointer;
+        color: white;
       }
       @media screen and (max-width: 500px) {
         width: calc(100% + 2rem);

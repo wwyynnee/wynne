@@ -1,8 +1,8 @@
 function order() {
   //$('.order').css({ display: 'flex' })
   //$('body').css({ overflowY: 'hidden' })
-
-  alert("Заказ временно недоступен, обратитесь в Telegram @wwyynnee")
+  window.location.href = 'https://t.me/wwyynnee'
+  //alert("Заказ временно недоступен, обратитесь в Telegram @wwyynnee")
 }
 
 function closeOrder() {

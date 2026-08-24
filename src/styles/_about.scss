@@ -1,0 +1,98 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -40px 0 48px;
+    @media screen and (max-width: 900px) {
+        margin: 2rem 0 48px;
+    }
+    &__items {
+        max-width: 1200px;
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+        &-container {
+            display: flex;
+            align-items: center;
+            &:first-child {
+                @media screen and (max-width: 900px) {
+                    flex-direction: column;
+                }
+                p {
+                    @include gradient-text;
+                    font-size: 24px;
+                    font-weight: $font-medium;
+                    margin-bottom: 1rem;
+                }
+                img {
+                    @media screen and (max-width: 600px) {
+                        width: 300px;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            &:last-child {
+                @media screen and (max-width: 900px) {
+                    flex-direction: column-reverse;
+                }
+                p {
+                    font-size: 24px;
+                    line-height: 150%;
+                    margin-bottom: 24px;
+                    @media screen and (max-width: 1024px) {
+                        font-size: 20px;
+                        margin-bottom: 1rem;
+                    }
+                }
+                span {
+                    color: $color-grey;
+                    @media screen and (max-width: 1024px) {
+                        font-size: 18px;
+                    }
+                }
+                img {
+                    margin-right: 60px;
+                    @media screen and (max-width: 900px) {
+                        margin: 2rem 0 0 0;
+                    }
+                    @media screen and (max-width: 600px) {
+                        width: 250px;
+                    }
+                }
+            }
+            span {
+                font-size: 20px;
+                line-height: 160%;
+                @media screen and (max-width: 430px) {
+                    line-height: 140%;
+                }
+            }
+            ul {
+                margin-top: 1rem;
+                li {
+                    font-size: 20px;
+                    line-height: 160%;
+                    padding: .5rem calc(28px + 18px) .5rem;
+                    position: relative;
+                    list-style-type: none;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 28px;
+                        height: 2px;
+                        background: url("src/assets/elements/point.png") no-repeat;
+                        @media screen and (max-width: 1024px) {
+                            width: 25px;
+                        }
+                    }
+                    @media screen and (max-width: 1024px) {
+                        font-size: 18px;
+                        padding: .25rem 0 .25rem calc(25px + 16px);
+                    }
+                }
+            }
+        }
+    }
+}

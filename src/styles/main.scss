@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "var";
+@import "nav";
+@import "about";
+@import "services";
+@import "portfolio";
+@import "skills";
+@import "footer";
+@import "menu";
+@import "order";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color1;
+}
+
+button {
+  font-family: $font;
+  cursor: pointer;
+  user-select: none;
+}
+
+input, textarea {
+  font-family: $font;
+}
+
+img {
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+summary img {
+  width: 32px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  transition: transform 0.3s;
+  overflow-x: hidden;
+  font-family: $font;
+  height: 100%;
+  width: 100%;
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("src/assets/background/bg.png");
+    background-size: cover;
+    height: calc(100vh + 120px);
+    @media screen and (max-width: 1023px) {
+      height: 100vh;
+      border-radius: 0 0 100% / 75px;
+    }
+    width: 100%;
+    padding: 0 1rem;
+    color: white;
+    p {
+      font-size: 48px;
+      font-weight: $font-semibold;
+      margin: 0 1rem 1rem;
+    }
+    span {
+      font-size: 20px;
+      font-weight: $font-regular;
+      text-align: center;
+      line-height: 1.5;
+      @media screen and (max-width: 430px) {
+        font-size: 18px;
+      }
+    }
+    &__block {
+      display: flex;
+      margin-top: 1rem;
+      a {
+        margin-right: 24px;
+        border-radius: 50px;
+        height: 50px;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+            background-color: $color-hover;
+        }
+        img {
+            height: 50px;
+        }
+      }
+    }
+    button {
+      background: $gradient;
+      border-radius: 10px;
+      color: white;
+      font-weight: $font-regular;
+      font-size: 20px;
+      text-align: center;
+      border: 0;
+      max-width: 300px;
+      width: 100%;
+      height: 55px;
+      margin: 24px 1rem 84px;
+      &:hover {
+        outline: solid 2px white;
+      }
+      @media screen and (max-width: 1023px) {
+        margin: 24px 1rem 60px;
+      }
+    }
+  }
+}
+
+.svgs {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  svg {
+    position: absolute;
+    bottom: -120px;
+    max-width: 1920px;
+    width: 100%;
+    stroke-width: 5px;
+    stroke: #fff;
+  }
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.svg-mobile {
+  display: none;
+  @media screen and (max-width: 430px) {
+    display: block;
+    min-height: 25px;
+    max-height: 34px;
+  }
+}

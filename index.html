@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#141416">
+    <meta property="og:title" content="Wynne" />
+    <meta property="og:description" content="Frontend-разработчик & Веб-дизайнер" />
+    <meta property="og:image" content="https://wwyynnee.site/preview.png" />
+    <meta property="og:url" content="https://wwyynnee.site" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Wynne" />
+    <meta name="twitter:description" content="Frontend-разработчик & Веб-дизайнер" />
+    <meta name="twitter:image" content="https://wwyynnee.site/preview.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="src/assets/logo/icon.png" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(99121868, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99121868" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <title>Wynne</title>
+  </head>
+  <body>
+    <div id="loader">
+        <span class="loader"></span>
+    </div>
+    <div class="nav">
+      <div class="nav__items">
+        <div class="nav__items-container">
+          <img src="src/assets/logo/icon.png" alt="logo" />
+          <p>Wynne</p>
+        </div>
+        <div class="nav__items-container">
+          <ul>
+            <a href="#about">
+              <li>Обо мне</li>
+            </a>
+            <a href="#services">
+              <li>Услуги</li>
+            </a>
+            <a href="#portfolio">
+              <li>Портфолио</li>
+            </a>
+            <a href="#skills">
+              <li>Навыки</li>
+            </a>
+          </ul>
+        </div>
+        <div class="nav__items-container">
+          <button onclick="order()">Заказать сайт</button>
+        </div>
+        <div class="nav__items-container" onclick="menu()">
+          <svg
+            width="20"
+            height="16"
+            viewBox="0 0 20 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0H20V2H0V0Z" fill="white" />
+            <path d="M0 7H20V9H0V7Z" fill="white" />
+            <path d="M0 14H20V16H0V14Z" fill="white" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+        <style>
+            @media screen and (max-width: 1023px) {
+                body .main {
+                    height: 100vh;
+                    border-radius: 0 0 100% / 75px;
+                }
+            }
+        </style>
+      <p>Wynne</p>
+      <span>Frontend-разработчик · Веб-дизайнер</span>
+      <div class="main__block">
+        <a href="https://t.me/wwyynnee"
+          ><img src="src/assets/icons/telegram.png" alt="telegram"
+        /></a>
+        <a href="#"><img src="src/assets/icons/discord.png" alt="discord" /></a>
+        <a href="https://github.com/wwyynnee"
+          ><img src="src/assets/icons/github.png" alt="github"
+        /></a>
+      </div>
+      <button onclick="order()">Заказать сайт</button>
+      <div class="svgs">
+        <svg
+          viewBox="0 0 1919 55"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.873543 53.4511L1 54.4348H1921L1921.13 53.4517C1853.39 35.4028 1715.99 22.0722 1543.93 13.3C1371.85 4.52688 1165.05 0.311275 958.468 0.506477C751.882 0.701678 545.505 5.30769 374.271 14.1784C203.057 23.0482 66.9281 36.1836 0.873543 53.4511Z"
+            fill="white"
+            stroke="white"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="about" id="about">
+      <div class="about__items">
+        <div class="about__items-container">
+          <div class="about__items-container__block">
+            <p>Обо мне</p>
+            <span data-aos="fade-down"
+              >Я занимаюсь разработкой и созданием веб-сайтов более 4-х лет.
+              Владею всеми основными технологиями на продвинутом уровне. Я
+              помогаю воплощать Ваши идеи и дизайны в веб-жизнь.<br />
+              Со мной удобно работать и мне важно, чтобы клиент остался доволен!
+              Моя цель ― предоставить лучшую услугу на рынке!</span
+            >
+          </div>
+          <div class="about__items-container__block" data-aos="zoom-in-left">
+            <img src="src/assets/elements/1.png" alt="" />
+          </div>
+        </div>
+        <div class="about__items-container">
+          <div class="about__items-container__block" data-aos="zoom-in-right">
+            <img src="src/assets/elements/2.png" alt="" />
+          </div>
+          <div class="about__items-container__block">
+            <p data-aos="fade-down">
+              Берусь за сложные и нестандартные проекты, для простых нахожу
+              интересные решения
+            </p>
+            <span data-aos="fade-down"
+              >Вы можете заказать у меня сайт любого масштаба (от «визитки» или
+              «лендинга» до корпоративного портала или интернет-магазина)</span
+            >
+            <ul>
+              <li data-aos="fade-left">
+                Принимаю как готовые макеты, так и разрабатываю макеты для
+                сайтов самостоятельно
+              </li>
+              <li data-aos="fade-left">
+                Подхожу к заказу ответственно и выполняю его максимально за
+                короткий срок
+              </li>
+              <li data-aos="fade-left">
+                Готов приступить уже к выполнению заказа, всегда на связи
+              </li>
+              <li data-aos="fade-left">
+                Всегда довожу дело до конца, не нарушая сроков
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services" id="services">
+      <div class="services__items">
+        <div class="services__items-container">
+          <p>Услуги</p>
+        </div>
+        <div class="services__items-container">
+          <div class="services__items-container__item" data-aos="fade-right">
+            <img src="src/assets/services/1.png" alt="" />
+            <div class="services__items-container__item-block">
+              <div class="services__items-container__item-block__elem">
+                <p>Сайт-визитка или лендинг</p>
+                <div class="points"></div>
+                <p>от 5 000 ₽</p>
+              </div>
+              <div class="services__items-container__item-block__elem">
+                <span
+                  >Создам стильную и информативную сайт-визитку или лендинг,
+                  который поможет вам произвести первое впечатление на ваших
+                  клиентов и выделиться на фоне конкурентов</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="services__items-container__item" data-aos="fade-left">
+            <img src="src/assets/services/2.png" alt="" />
+            <div class="services__items-container__item-block">
+              <div class="services__items-container__item-block__elem">
+                <p>Многостраничный сайт</p>
+                <div class="points"></div>
+                <p>от 10 000 ₽</p>
+              </div>
+              <div class="services__items-container__item-block__elem">
+                <span
+                  >Если вам нужен более комплексный подход, я предлагаю создание
+                  многостраничных сайтов. Эти сайты идеально подходят для
+                  компаний, которые хотят представить широкий спектр услуг и
+                  информации о себе</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="services__items-container__item" data-aos="fade-right">
+            <img src="src/assets/services/3.png" alt="" />
+            <div class="services__items-container__item-block">
+              <div class="services__items-container__item-block__elem">
+                <p>Наполнение сайта</p>
+                <div class="points"></div>
+                <p>от 1 500 ₽</p>
+              </div>
+              <div class="services__items-container__item-block__elem">
+                <span
+                  >Не знаете, как заполнить сайт контентом? Помогу вам с
+                  созданием и редактированием текстов, подбором изображений и
+                  оптимизацией контента для поисковых систем, чтобы ваш сайт
+                  выглядел профессионально и привлекал посетителей</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="services__items-container__item" data-aos="fade-left">
+            <img src="src/assets/services/4.png" alt="" />
+            <div class="services__items-container__item-block">
+              <div class="services__items-container__item-block__elem">
+                <p>Доработка сайта</p>
+                <div class="points"></div>
+                <p>от 3 000 ₽</p>
+              </div>
+              <div class="services__items-container__item-block__elem">
+                <span
+                  >У вас уже есть сайт, но он нуждается в улучшениях? Я
+                  предлагаю услуги по доработке и оптимизации существующих
+                  сайтов, включая исправление ошибок, обновление дизайна и
+                  добавление новых функций</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="services__items-container__item" data-aos="fade-right">
+            <img src="src/assets/services/5.png" alt="" />
+            <div class="services__items-container__item-block">
+              <div class="services__items-container__item-block__elem">
+                <p>Веб-дизайн</p>
+                <div class="points"></div>
+                <p>от 2 500 ₽</p>
+              </div>
+              <div class="services__items-container__item-block__elem">
+                <span
+                  >Я создам уникальный и привлекательный дизайн для вашего
+                  сайта. Разработаю стильный интерфейс, который будет
+                  соответствовать вашему бренду и обеспечит удобство навигации
+                  для пользователей</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services__items">
+        <div class="services__items-container">
+          <details data-aos="zoom-in-right">
+            <summary class="summary-1">
+              Этапы работы <img src="src/assets/elements/arrow.png" alt="" />
+            </summary>
+            <div class="list">
+              <div class="list__item">
+                <div class="list__item-container">1</div>
+                <div class="list__item-container">
+                  <p>Составление технического задания</p>
+                  <span
+                    >На этом этапе я отправляю бриф, обсуждаем задачи и цели,
+                    сроки и оплату</span
+                  >
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="list__item-container">2</div>
+                <div class="list__item-container">
+                  <p>Разработка макета, дизайна проекта</p>
+                  <span
+                    >Разрабатываю самостоятельно макет или дам консультации по
+                    готовому макету</span
+                  >
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="list__item-container">3</div>
+                <div class="list__item-container">
+                  <p>Создание сайта на основе макета</p>
+                  <span
+                    >Подбираю подходящие технологии и создаю полноценный сайт,
+                    также оптимизирую его и адаптирую под устройства</span
+                  >
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="list__item-container">4</div>
+                <div class="list__item-container">
+                  <p>Показ проекта</p>
+                  <span
+                    >На этом этапе снимаю видео и/или показываю скриншоты
+                    выполненного проекта</span
+                  >
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="list__item-container">5</div>
+                <div class="list__item-container">
+                  <p>Завершение проекта и оплата работы</p>
+                  <span
+                    >После одобрения оплачиваете работу, а я подключаю сайт к
+                    хостингу. По необходимости настрою аналитику и рекламу</span
+                  >
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio" id="portfolio">
+      <svg viewBox="0 0 1920 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M-0.11981 50.6369L0 51.6224H1920L1920.12 50.6375C1852.38 33.5975 1714.99 21.0116 1542.93 12.7295C1370.85 4.44646 1164.05 0.466349 957.468 0.650646C750.883 0.834943 544.506 5.18365 373.273 13.5588C202.058 21.9331 65.9319 34.3347 -0.11981 50.6369Z"
+          fill="#141417"
+          stroke="#141417"
+        />
+      </svg>
+      <svg
+        class="svg-black-mobile"
+        viewBox="0 0 430 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M-0.269367 30.089L-1.71001 31.0103H0H430H431.683L430.273 30.0914C422.625 25.1066 411.082 20.7949 396.663 17.1292C382.235 13.4611 364.889 10.4307 345.608 8.02615C307.047 3.21689 260.712 0.906832 214.432 1.0138C168.151 1.12078 121.912 3.64481 83.5401 8.50749C64.3544 10.9388 47.1277 13.9557 32.8421 17.55C18.5664 21.1418 7.18966 25.3192 -0.269367 30.089Z"
+          fill="#141417"
+          stroke="#141417"
+        />
+      </svg>
+      <div class="portfolio__items">
+        <div class="portfolio__items-container">
+          <p>Портфолио</p>
+        </div>
+        <div class="portfolio__items-container">
+          <div
+            class="portfolio__items-container__elem"
+            data-aos="fade-up-right"
+          >
+            <a href="https://artemida-store.vercel.app" target="_blank"
+              >Artemida<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Интернет-магазин по продаже шоколада, паст и мармелада</p>
+            <img src="src/assets/portfolio/artemida.png" alt="" />
+          </div>
+          <div class="portfolio__items-container__elem" data-aos="fade-up-left">
+            <a href="https://belakvapark.ru/" target="_blank"
+              >Сайт аквапарка Лазурный<img
+                src="src/assets/icons/link.svg"
+                alt="Ссылка"
+            /></a>
+            <p>Многостраничный сайт на 1С-Битрикс</p>
+            <img
+              src="src/assets/portfolio/akvapark.png"
+              alt="Сайт аквапарка Лазурный"
+            />
+          </div>
+          <div
+            class="portfolio__items-container__elem"
+            data-aos="fade-up-right"
+          >
+            <a href="https://pirate-courses.ru/" target="_blank"
+              >Сливы курсов<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Сайт по сливу платных материалов</p>
+            <img src="src/assets/portfolio/pirate.png" alt="Сливы курсов" />
+          </div>
+          <div class="portfolio__items-container__elem" data-aos="fade-up-left">
+            <a href="https://hildshop.vercel.app/" target="_blank"
+              >Hild Shop<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Лендинг для магазина цифровых товаров</p>
+            <img src="src/assets/portfolio/hildshop.png" alt="Hild Shop" />
+          </div>
+          <div
+            class="portfolio__items-container__elem"
+            data-aos="fade-up-right"
+          >
+            <a href="https://kamiko.vercel.app/" target="_blank"
+              >Kamiko<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Сайт для Discord-бота Kamiko</p>
+            <img src="src/assets/portfolio/kamiko.png" alt="Kamiko" />
+          </div>
+          <div class="portfolio__items-container__elem" data-aos="fade-up-left">
+            <a href="https://darkland.vercel.app/" target="_blank"
+              >Darkland<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Лендинг для Discord-сервера Darkland</p>
+            <img src="src/assets/portfolio/darkland.png" alt="Darkland" />
+          </div>
+          <div
+            class="portfolio__items-container__elem"
+            data-aos="fade-up-right"
+          >
+            <a href="https://nemnemteam-new.vercel.app/" target="_blank"
+              >Nem nem Team<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Новый лендинг для Discord-сервера Nem nem Team по CS:GO</p>
+            <img
+              src="src/assets/portfolio/nemnemteam_cs.png"
+              alt="Nem nem Team"
+            />
+          </div>
+          <div class="portfolio__items-container__elem" data-aos="fade-up-left">
+            <a href="https://nemnemteam-old.vercel.app/" target="_blank"
+              >Ñěm ņĕm Ťêām<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Лендинг для Discord-сервера Ñěm ņĕm Ťêām</p>
+            <img src="src/assets/portfolio/nemnemteam.png" alt="Ñěm ņĕm Ťêām" />
+          </div>
+          <div
+            class="portfolio__items-container__elem"
+            data-aos="fade-up-right"
+          >
+            <a href="https://notipas.vercel.app/" target="_blank"
+              >Notipas<img src="src/assets/icons/link.svg" alt="Ссылка"
+            /></a>
+            <p>Сайт для Minecraft-сервера</p>
+            <img src="src/assets/portfolio/notipas.png" alt="Notipas" />
+          </div>
+          <div class="portfolio__items-container__elem" data-aos="fade-up-left">
+            <a href="https://projector-cinema.vercel.app/" target="_blank"
+              >Проектор домашний кинотеатр<img
+                src="src/assets/icons/link.svg"
+                alt="Ссылка"
+            /></a>
+            <p>Лендинг по продаже проектора</p>
+            <img
+              src="src/assets/portfolio/projector.png"
+              alt="Проектор домашний кинотеатр"
+            />
+          </div>
+        </div>
+        <svg
+          style="margin-top: 1.5rem"
+          viewBox="0 0 1919 55"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.873543 53.4511L1 54.4348H1921L1921.13 53.4517C1853.39 35.4028 1715.99 22.0722 1543.93 13.3C1371.85 4.52688 1165.05 0.311275 958.468 0.506477C751.882 0.701678 545.505 5.30769 374.271 14.1784C203.057 23.0482 66.9281 36.1836 0.873543 53.4511Z"
+            fill="white"
+            stroke="white"
+          />
+        </svg>
+        <svg
+          style="margin-top: 1.5rem"
+          class="svg-mobile"
+          viewBox="0 0 430 29"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 29C59.1221 -8.80644 369.366 -10.5174 430 29H0Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="skills" id="skills">
+      <div class="skills__items">
+        <p>Основные навыки</p>
+        <div class="skills__items-container" data-aos="fade-down">
+          <img src="src/assets/skills/React.png" alt="React" />
+          <img src="src/assets/skills/JavaScript.png" alt="JavaScript" />
+          <img src="src/assets/skills/TypeScript.png" alt="TypeScript" />
+          <img src="src/assets/skills/HTML5.png" alt="HTML" />
+          <img src="src/assets/skills/CSS.png" alt="CSS" />
+          <img src="src/assets/skills/Figma.png" alt="Figma" />
+          <img src="src/assets/skills/Git.png" alt="Git" />
+          <img src="src/assets/skills/Nodejs.png" alt="Node.js" />
+          <img src="src/assets/skills/TailwindCSS.png" alt="TailwindCSS" />
+          <img src="src/assets/skills/Sass.png" alt="Sass" />
+          <img src="src/assets/skills/Less.png" alt="Less" />
+          <img src="src/assets/skills/Python.png" alt="Python" />
+          <img src="src/assets/skills/PHP.png" alt="PHP" />
+          <img src="src/assets/skills/SQL.png" alt="SQL" />
+        </div>
+        <div class="skills__items-container certificates-mobile">
+          <details data-aos="zoom-in-right">
+            <summary class="summary-2">
+              Сертификаты <img src="src/assets/elements/arrow.png" alt="" />
+            </summary>
+            <div class="certificates">
+              <div class="certificates__item">
+                <img src="src/assets/certificates/1.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/1.png" target="_blank"
+                    >React + Redux<img
+                      src="src/assets/icons/link.svg"
+                      alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/2.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/2.png" target="_blank"
+                    >Game Development with JS<img
+                      src="src/assets/icons/link.svg"
+                      alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/3.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/3.png" target="_blank"
+                    >Responsive Web Design<img
+                      src="src/assets/icons/link.svg"
+                      alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/4.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/4.png" target="_blank"
+                    >JavaScript<img
+                      src="src/assets/icons/link.svg"
+                      alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/5.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/5.png" target="_blank"
+                    >jQuery<img src="src/assets/icons/link.svg" alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/6.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/6.png" target="_blank"
+                    >PHP<img src="src/assets/icons/link.svg" alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/7.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/7.png" target="_blank"
+                    >SQL<img src="src/assets/icons/link.svg" alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/8.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/8.png" target="_blank"
+                    >CSS<img src="src/assets/icons/link.svg" alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+              <div class="certificates__item">
+                <img src="src/assets/certificates/9.png" alt="" />
+                <div class="certificates__item-container">
+                  <a href="src/assets/certificates/9.png" target="_blank"
+                    >HTML<img src="src/assets/icons/link.svg" alt="Ссылка"
+                  /></a>
+                  <p>Сертификат об успешном прохождении курса</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__items">
+        <p id="year">© Wynne · 2024</p>
+        <div class="footer__items-container">
+          <a href="https://t.me/wwyynnee"
+            ><img src="src/assets/icons/telegram.png" alt=""
+          /></a>
+          <a href="#"><img src="src/assets/icons/discord.png" alt="" /></a>
+          <a href="https://github.com/wwyynnee"
+            ><img src="src/assets/icons/github.png" alt=""
+          /></a>
+        </div>
+        <button onclick="order()">Заказать сайт</button>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="menu__items">
+        <span onclick="closeMenu()">✕</span>
+      </div>
+      <div class="menu__items">
+        <ul>
+          <a href="#about">
+            <li>Обо мне</li>
+          </a>
+          <a href="#services">
+            <li>Услуги</li>
+          </a>
+          <a href="#portfolio">
+            <li>Портфолио</li>
+          </a>
+          <a href="#skills">
+            <li>Навыки</li>
+          </a>
+        </ul>
+        <button onclick="order()">Заказать сайт</button>
+      </div>
+      <div class="menu__items">
+        <a href="https://t.me/wwyynnee"
+          ><img src="src/assets/icons/telegram.png" alt=""
+        /></a>
+        <a href="#"><img src="src/assets/icons/discord.png" alt="" /></a>
+        <a href="https://github.com/wwyynnee"
+          ><img src="src/assets/icons/github.png" alt=""
+        /></a>
+      </div>
+    </div>
+    <div class="order">
+      <div class="order__items">
+        <div class="order__items-container">
+          <p>Ваш заказ:</p>
+          <span onclick="closeOrder()">✕</span>
+        </div>
+        <hr />
+        <form action="send.php" method="post" id="form">
+          <input type="text" name="name" minlength="2" placeholder="Ваше имя" required />
+          <input type="email" name="email" placeholder="Ваш email" required />
+          <input type="text" name="phone" id="phone" placeholder="Ваш телефон"  />
+          <textarea name="message" placeholder="Сообщение" required></textarea>
+          <div class="h-captcha" data-sitekey="cebabfaa-375a-4464-8806-35c24bfa903e"></div>
+          <input type="submit" id="submit" value="Оформить заказ" />
+        </form>
+      </div>
+    </div>
+    <script>
+      document.getElementById('form').addEventListener('submit', function(e) {
+          let token = document.querySelector('[name="h-captcha-response"]').value;
+          
+          if (!token) {
+              e.preventDefault();
+              document.getElementById('submit').style.opacity = ".1";
+              document.getElementById('submit').style.cursor = "no-drop";
+          }
+      });
+      
+      setInterval(() => {
+        let token = document.querySelector('[name="h-captcha-response"]')?.value;
+            if (token) {
+                document.getElementById('submit').style.opacity = "1";
+                document.getElementById('submit').style.cursor = "pointer";
+            }
+        }, 1000);
+    </script>
+    <script src="https://js.hcaptcha.com/1/api.js?hl=ru" async defer></script>
+    <script src="src/scripts/list.js" defer></script>
+    <script src="src/scripts/menu.js" defer></script>
+    <script src="src/scripts/order.js" defer></script>
+    <script>
+      AOS.init()
+
+      window.onload = function () {
+        if (window.innerWidth <= 1023) {
+          const elements = document.querySelectorAll('[data-aos]')
+          elements.forEach((element) => {
+            element.removeAttribute('data-aos')
+          })
+        }
+      }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let input = document.getElementById("phone");
+            let inputMask = new Inputmask("+7 (999) 999-99-99");
+
+            inputMask.mask(input);
+
+            input.addEventListener("blur", function() {
+                if (input.inputmask.unmaskedvalue() === "") {
+                    input.value = "";
+                }
+            });
+
+            input.addEventListener("input", function() {
+                if (input.value.length === 0) {
+                    input.value = "";
+                }
+            });
+        });
+    </script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent = `© Wynne · ${currentYear}`;
+    </script>
+    <script>
+      window.addEventListener("load", function() {
+          const loader = document.getElementById("loader");
+          loader.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
+

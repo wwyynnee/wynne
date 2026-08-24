@@ -1,0 +1,21 @@
+$color1: #5433ff;
+$color2: #20bdff;
+$color-block: #141417;
+$color-grey: rgba(0, 0, 0, 0.5);
+$color-points: #14151880;
+$color-hover: #fafafa40;
+$color-input: #F0F0F0;
+$color-input-text: rgba(0, 0, 0, 0.6);
+$gradient: linear-gradient(90deg, $color1 0%, $color2 100%);
+$font: "Montserrat", sans-serif;
+$font-semibold: 600;
+$font-medium: 500;
+$font-regular: 300;
+
+@mixin gradient-text {
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}

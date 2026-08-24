@@ -1,0 +1,95 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    svg {
+        max-width: 1920px;
+        width: 100%;
+        stroke-width: 5px;
+        stroke: $color-block;
+        &:not(.svg-black-mobile, .svg-mobile) { 
+            @media screen and (max-width: 430px) {
+                display: none;
+            }
+        }
+        &.svg-mobile {
+            stroke: white;
+        }
+    }
+    &__items {
+        width: 100%;      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-block;
+        &-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            width: calc(100% - 2rem);
+            margin: 0 1rem;
+            &:first-child {
+                p {
+                    @include gradient-text;
+                    font-size: 24px;
+                    font-weight: $font-medium;
+                    margin: 1rem 0 2rem;
+                }
+            }
+            &__elem {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 10px;
+                padding: 1rem;
+                width: calc(50% - 1rem);
+                font-weight: $font-medium;
+                margin: 0 2rem 2rem 0;
+                &:nth-child(2n) {
+                    margin: 0 0 2rem;
+                    @media screen and (max-width: 838px) {
+                        margin: 0 0 1rem;
+                    }
+                }
+                @media screen and (max-width: 838px) {
+                    width: 100%;
+                    margin: 0 0 1rem;
+                }
+                a {
+                    display: flex;
+                    align-items: flex-start;
+                    color: black;
+                    font-size: 20px;
+                    &:hover {
+                        text-decoration: underline;
+                        text-decoration-thickness: 1px;
+                        text-underline-offset: 4px;
+                    }
+                    img {
+                        margin: 4px 0 0 8px;
+                    }
+                }
+                p {
+                    margin: 1rem 0 24px;
+                    color: $color-grey;
+                    @media screen and (max-width: 838px) {
+                        line-height: 137%;            
+                    }
+                    @media screen and (max-width: 430px) {
+                        margin: 8px 0 10px;
+                    }
+                }
+                img:not(a img) {
+                    width: calc(100% + 1px);
+                }
+            }
+        }
+    }
+}
+.svg-black-mobile {
+    display: none;
+    @media screen and (max-width: 430px) {
+        display: block;
+    }
+}

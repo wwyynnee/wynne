@@ -1,0 +1,80 @@
+.order {
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    overflow-y: scroll;
+    user-select: none;
+    &__items {
+        background-color: white;
+        border-radius: 20px;
+        max-width: 480px;
+        width: calc(100% - 2rem);
+        padding: 2rem;
+        margin: 1rem 0;
+        @media screen and (max-height: 659px) {
+            position: absolute;
+            top: 0;
+        }
+        @media screen and (max-width: 375px) {
+            padding: 1.5rem;
+        }
+        @media screen and (max-width: 330px) {
+            padding: 1rem;
+        }
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                font-weight: $font-medium;
+                font-size: 22px;
+            }
+            span {
+                font-size: 36px;
+                font-weight: $font-medium;
+                cursor: pointer;
+            }
+        }
+        hr {
+            margin: 12px 0 24px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            input, textarea {
+                border-radius: 10px;
+                margin-bottom: 1rem;
+                background-color: $color-input;
+                border: none;
+                font-size: 16px;
+                color: $color-input-text;
+            }
+            input {
+                height: 60px;
+                padding: 0 1rem;
+                outline-color: $color2;
+                &[type=submit] {
+                    background-color: $color-block;
+                    color: white;
+                    margin: 0;
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+            }
+            textarea {
+                height: 130px;
+                padding: 1rem;
+                font-size: 16px;
+                resize: none;
+                outline-color: $color2;
+            }
+        }
+    }
+}
